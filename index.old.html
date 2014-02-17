@@ -13,7 +13,7 @@
 		<link rel="stylesheet" media="screen" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
 		<link rel="stylesheet" media="screen" href="css/social-icons.css" />
 		<link rel="stylesheet" media="screen" href="css/light-dose.css" />
-		<!-- <link rel="stylesheet" media="screen" href="css/demo.css" /> -->
+		<link rel="stylesheet" media="screen" href="css/demo.css" />
 		<!--[if IE 8]>
 			<link rel="stylesheet" type="text/css" href="css/light-dose-ie8.css" />
 		<![endif]-->
@@ -26,14 +26,63 @@
 		<![endif]-->
 	</head>
 	<body>
-		
+
+		<!--BEGIN Preloader-->
+		<!--DESCRIPTION
+			Spinner configuration can be changed using:
+				http://fgnass.github.io/spin.js/
+			After configuration <Spinner options> section should be replaced with desired options.
+		-->
+		<script type="text/javascript" src="js/spin.min.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			var element = document.createElement( 'div' );
+			element.id = 'spin';
+			element.style.position = 'fixed';
+			element.style.zIndex = 10000;
+			element.style.top = 0;
+			element.style.right = 0;
+			element.style.bottom = 0;
+			element.style.left = 0;
+			element.style.width = '100%';
+			element.style.height = '100%';
+			element.style.background = '#FFF';
+			document.body.appendChild( element );
+			//	Starting a spin
+
+			//<!--BEGIN Spinner options-->
+			var opts = {
+			  lines: 7, // The number of lines to draw
+			  length: 0, // The length of each line
+			  width: 7, // The line thickness
+			  radius: 7, // The radius of the inner circle
+			  corners: 0.9, // Corner roundness (0..1)
+			  rotate: 0, // The rotation offset
+			  direction: 1, // 1: clockwise, -1: counterclockwise
+			  color: '#000', // #rgb or #rrggbb or array of colors
+			  speed: 1.2, // Rounds per second
+			  trail: 85, // Afterglow percentage
+			  shadow: false, // Whether to render a shadow
+			  hwaccel: false, // Whether to use hardware acceleration
+			  className: 'spinner', // The CSS class to assign to the spinner
+			  zIndex: 2e9, // The z-index (defaults to 2000000000)
+			  top: 'auto', // Top position relative to parent in px
+			  left: 'auto' // Left position relative to parent in px
+			};
+			//<!--END Spinner options-->
+			var target = document.getElementById( 'spin' );
+			var spinner = new Spinner( opts ).spin( target );
+		</script>
+		<!--END	Preloader-->
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
 		<!--BEGIN Topper-->
 		<header class="theme-white background foreground topper" id="navigation">
 			<div class="container stretch-height text-right">
 				<a class="logo scroll stretch-height pull-left text-left" href="index.html#slider">
 					<!--BEGIN Logo image-->
 					<div class="image pull-left">
-						<img src="imagens/logo.png" alt="" />
+						<img src="imagens/header.logo.png" alt="" />
 					</div>
 					<!--END Logo image-->
 				</a>
@@ -110,6 +159,8 @@
 		</header>
 		<!--END Topper-->
 
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
 		<!--BEGIN Slider-->
 		<!--DESCRIPTION
 
@@ -125,7 +176,6 @@
 								AGRIÕES LIVINGS
 							</h1>
 
-
 							<!--BEGIN Slider caption-->
 							<!--DESCRIPTION
 
@@ -134,7 +184,7 @@
 
 							-->
 							<h4 class="data-full">
-								&nbsp;
+								Flat & Minimal One Page Responsive Template
 							</h4>
 							<!--END Slider caption-->
 
@@ -160,14 +210,17 @@
 					<img class="fallback" src="img/light-dose/slider/1.jpg" alt="video" />
 				</video>
 				-->
-				<img class="slide" src="img/light-dose/slider/6.jpg" alt="" />
-				<img class="slide" src="img/light-dose/slider/1.jpg" alt="" />
-				<img class="slide" src="img/light-dose/slider/2.jpg" alt="" />
-
+				<img class="slide" src="img/light-dose/slider/1.jpg" data-short="Light Dose" data-full="No Line on the Horizon" alt="No Line on the Horizon" />
+				<img class="slide" src="img/light-dose/slider/2.jpg" data-short="Light Dose" data-full="The Shawshank Redemption" alt="The Shawshank Redemption" />
+				<img class="slide" src="img/light-dose/slider/3.jpg" data-short="Light Dose" data-full="Il buono, il brutto, il cattivo" alt="Il buono, il brutto, il cattivo" />
+				<img class="slide" src="img/light-dose/slider/4.jpg" data-short="Light Dose" data-full="Raiders of the Lost Ark" alt="Raiders of the Lost Ark" />
+				<img class="slide" src="img/light-dose/slider/5.jpg" data-short="Light Dose" data-full="Le fabuleux destin d'Amélie Poulain" alt="Le fabuleux destin d'Amélie Poulain" />
+				<img class="slide" src="img/light-dose/slider/6.jpg" data-short="Light Dose" data-full="Eternal Sunshine of the Spotless Mind" alt="Eternal Sunshine of the Spotless Mind" />
+				<img class="slide" src="img/light-dose/slider/7.jpg" data-short="Light Dose" data-full="The story of the friendship" alt="The story of the friendship" />
 				<!--
 				Flat & Minimal One Page Responsive Template
 				-->
-				<!--d
+				<!--
 				<img src="img/light-dose/slider/slider-image-0-low.jpg" data-short="No Line on the Horizon" data-full="is the twelfth studio album by rock band U2. Released on 27 February 2009, it was the band's first record since How to Dismantle an Atomic Bomb (2004), marking the longest gap between studio albums of U2's career." />
 				<img src="img/light-dose/slider/slider-image-1-low.jpg" data-short="The Shawshank Redemption" data-full="American drama film written and directed by Frank Darabont and starring Tim Robbins and Morgan Freeman." />
 				<img src="img/light-dose/slider/slider-image-2-low.jpg" data-short="Il buono, il brutto, il cattivo" data-full="Tra i più celebri film western della storia del cinema, è considerato la quintessenza del fortunato genere spaghetti-western." />
@@ -195,8 +248,15 @@
 		-->
 		<article class="about page-light-dose theme-white background foreground links" id="about">
 			<header class="text-center">
+				<div class="sect">
+					<div class="line line-left">
+					</div>
+					&sect;
+					<div class="line line-right">
+					</div>
+				</div>
 				<h2>
-					O EMPREENDIMENTO
+					About
 				</h2>
 			</header>
 			<div class="container">
@@ -212,8 +272,8 @@
 					<div class="blueimp col-lg-3 col-md-3 col-sm-6 col-xs-12 masonry">
 
 						<!--BEGIN Blueimp image-->
-						<a href="imagens/empreendimento.png" title="">
-							<img src="imagens/empreendimento.1.png" alt="" />
+						<a href="img/light-dose/blueimp/1_1.jpg" title="">
+							<img src="img/light-dose/blueimp/thumbnails/1_1.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
@@ -221,7 +281,7 @@
 
 						<!--BEGIN Blueimp image-->
 						<a href="img/light-dose/blueimp/1_2.jpg" title="">
-							<img src="imagens/empreendimento.1.png" alt="" />
+							<img src="img/light-dose/blueimp/thumbnails/1_2.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
@@ -229,7 +289,7 @@
 
 						<!--BEGIN Blueimp image-->
 						<a href="img/light-dose/blueimp/1_3.jpg" title="">
-							<img src="imagens/empreendimento.1.png" alt="" />
+							<img src="img/light-dose/blueimp/thumbnails/1_3.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
@@ -237,23 +297,7 @@
 
 						<!--BEGIN Blueimp image-->
 						<a href="img/light-dose/blueimp/1_4.jpg" title="">
-							<img src="imagens/empreendimento.1.png" alt="" />
-							<div class="overlay">
-							</div>
-						</a>
-						<!--END Blueimp image-->
-
-						<!--BEGIN Blueimp image-->
-						<a href="img/light-dose/blueimp/1_4.jpg" title="">
-							<img src="imagens/empreendimento.1.png" alt="" />
-							<div class="overlay">
-							</div>
-						</a>
-						<!--END Blueimp image-->
-
-						<!--BEGIN Blueimp image-->
-						<a href="img/light-dose/blueimp/1_4.jpg" title="">
-							<img src="imagens/empreendimento.1.png" alt="" />
+							<img src="img/light-dose/blueimp/thumbnails/1_4.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
@@ -265,22 +309,46 @@
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
 						<!--BEGIN About block caption-->
-						<h5>
-							PRATICIDADE
-						</h5>
-						<h6>é viver perto de tudo o que você precisa</h6>
+						<span class="caption color">
+							Who We Are?
+						</span>
 						<!--END About block caption-->
 
 						<p>
-							Nada melhor do que acordar e ter uma mesa de café da manhã completa com pão quentinho, ovos mexidos, seu
-							suco preferido com frutas frescas e tudo o que você mais gosta. Depois do café, deixar os filhos no colégio
-							em frente e voltar para o fitness center, se exercitar, nadar e ficar com toda a disposição para começar
-							o dia novinho em folha. Isto se chama PRATICIDADE.
+							Our сompany became famous among thousands of visitors and purchasers of the most known online resource copyright works during the short period of its existence.
 						</p>
 						<p>
-							Morar no Agriões Living significa ter acesso facilitado à conveniências que tornam o dia a dia mais prático.
-							A localização privilegiada permite acomodidade de estar perto de tudo que você e sua família precisam.
-							São diversas opções à sua
+							Our сompany offers a number of creative products such as: online stores templates, one page promo sites, graphic works and corporate style for the wide audience.
+						</p>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+						<!--BEGIN About block caption-->
+						<span class="caption color">
+							What Do We Do?
+						</span>
+						<!--END About block caption-->
+
+						<p>
+							«Itembridge» offers a number of creative products such as: online stores templates, one page promo sites, graphic works and corporate style for the wide audience.
+						</p>
+						<p>
+							Corporate style and graphic works always have the perfect design so you do not have to change a lot of settings to achieve the desired style.
+						</p>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+						<!--BEGIN About block caption-->
+						<span class="caption color">
+							Our Mission
+						</span>
+						<!--END About block caption-->
+
+						<p>
+							Our сompany is the friendly team of professionals, who create exclusive designs, unique and clear functionality of the templates.
+						</p>
+						<p>
+							Corporate style and graphic works always have the perfect design so you do not have to change a lot of settings to achieve the desired style.
 						</p>
 					</div>
 				</div>
@@ -298,19 +366,22 @@
 		<article class="facts page-light-dose theme-white background foreground links" id="facts">
 			<div class="container text-center">
 				<h5>
-					MAIS + 
+					Some facts about our company
 				</h5>
 
 				<div class="row">
 
 					<!--BEGIN Facts item-->
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<span class="counter restaurantes">
+						<span class="fa" data-color="#E0302A">
+							&#xf013;
+						</span>
+						<span class="counter">
 							<span class="value">
-								15
+								1400
 							</span>
 							<small>
-								RESTAURANTES
+								projects completed
 							</small>
 						</span>
 					</div>
@@ -318,12 +389,15 @@
 
 					<!--BEGIN Facts item-->
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<span class="counter agencias">
+						<span class="fa" data-color="#DBA500">
+							&#xf08a;
+						</span>
+						<span class="counter">
 							<span class="value">
-								20
+								750
 							</span>
 							<small>
-								AGÊNCIAS E CAIXAS<br>BANCÁRIOS
+								regular customers
 							</small>
 						</span>
 					</div>
@@ -331,12 +405,15 @@
 
 					<!--BEGIN Facts item-->
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-						<span class="counter mercados">
+						<span class="fa" data-color="#117919">
+							&#xf006;
+						</span>
+						<span class="counter">
 							<span class="value">
-								15
+								400
 							</span>
 							<small>
-								PADARIAS, MERCADOS<br>E CONVENIÊNCIAS
+								positive reviews
 							</small>
 						</span>
 					</div>
@@ -347,15 +424,123 @@
 		</article>
 		<!--END Facts-->
 
-		<!-- BEGIN Localização -->
-		<article class="localizacao page-light-dose theme-white" id="localizacao">
-		
+		<!--BEGIN Services-->
+		<!--DESCRIPTION
 
-			<img src='imagens/mapa.jpg' alt='' style=' width: 100%' />
+			This article is designed:
+				- with parallax background, see DEMO styles for details.
+				- with background-fade/blur and element slide-in animation effect upon first element viewing.
 
+		-->
+		<article class="services page-light-dose theme-color background foreground aparallax" id="services">
+			<div class="underlay">
+				<div class="overlay aparallax">
+				</div>
+				<header class="text-center">
+					<div class="sect">
+						<div class="line line-left">
+						</div>
+						&sect;
+						<div class="line line-right">
+						</div>
+					</div>
+					<h2>
+						Services
+					</h2>
+				</header>
+				<div class="container">
+					<div class="row">
+
+						<!--BEGIN Services item-->
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<h4>
+
+								<!--BEGIN Services item icon-->
+								<!--DESCRIPTION
+
+									For icon details one can visit
+										http://fortawesome.github.io/Font-Awesome/cheatsheet/
+									There all icon symbol details are supplied.
+
+								-->
+								<span class="fa">
+									&#xf133;
+								</span>
+								<!--END Services item icon-->
+
+								Promotion
+							</h4>
+							<p>
+								Оne of the market mix elements, and a term used frequently in marketing. These elements are personal selling, advertising, sales promotion, direct marketing, and publicity. A promotional mix specifies how much attention to pay to each of the five subcategories, and how much money to budget for each.
+							</p>
+						</div>
+						<!--END Services item-->
+
+						<!--BEGIN Services item-->
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<h4>
+
+								<!--BEGIN Services item icon-->
+								<span class="fa">
+									&#xf0eb;
+								</span>
+								<!--END Services item icon-->
+
+								Marketing
+							</h4>
+							<p>
+								Refers to advertising and marketing efforts that use the Web and e-mail to deliver promotional marketing messages to consumers.
+							</p>
+						</div>
+						<!--END Services item-->
+
+						<div class="clearfix visible-sm">
+						</div>
+
+						<!--BEGIN Services item-->
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<h4>
+
+								<!--BEGIN Services item icon-->
+								<span class="fa">
+									&#xf087;
+								</span>
+								<!--END Services item icon-->
+
+								Web Design
+							</h4>
+							<p>
+								Encompasses the great amount of different skills and disciplines that are used in the production and maintenance of website.
+							</p>
+						</div>
+						<!--END Services item-->
+
+						<div class="clearfix visible-md">
+						</div>
+
+						<!--BEGIN Services item-->
+						<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+							<h4>
+
+								<!--BEGIN Services item icon-->
+								<span class="fa">
+									&#xf08a;
+								</span>
+								<!--END Services item icon-->
+
+								Production
+							</h4>
+							<p>
+								The processes and methods used to transform tangible inputs (raw materials, semi-finished goods, subassemblies) and intangible inputs (ideas, information, knowledge) into goods or services. Resources are used in this process to create an output that is suitable for use or has exchange value.
+							</p>
+						</div>
+						<!--END Services item-->
+
+					</div>
+				</div>
+			</div>
 		</article>
-		<!-- END Localização -->
-
+		<!--END Services-->
 
 		<!--BEGIN Works-->
 		<!--DESCRIPTION
@@ -369,36 +554,34 @@
 		-->
 		<article class="works page-light-dose theme-white background foreground" id="works">
 			<header class="text-center">
+				<div class="sect">
+					<div class="line line-left">
+					</div>
+					&sect;
+					<div class="line line-right">
+					</div>
+				</div>
 				<h2>
-					Plantas e Ambientes
+					Works
 				</h2>
 			</header>
 
 			<div class="container">
 				<div class="row tags text-center grid-filter">
 					<a class="active" href="#" data-filter="*">
-						TODAS
+						All
 					</a>
-					<a href="#" data-filter=".lazer">
-						LAZER
+					<a href="#" data-filter=".architecture">
+						Architecture
 					</a>
-					<a href="#" data-filter=".3qtosa">
-						3 QTOS A
+					<a href="#" data-filter=".photography">
+						Photography
 					</a>
-					<a href="#" data-filter=".3qtosb">
-						3 QTOS B
+					<a href="#" data-filter=".style">
+						Style
 					</a>
-					<a href="#" data-filter=".2qtosa">
-						2 QTOS A
-					</a>
-					<a href="#" data-filter=".2qtosb">
-						2 QTOS B
-					</a>
-					<a href="#" data-filter=".garagem">
-						GARAGEM
-					</a>
-					<a href="#" data-filter=".garagemelevada">
-						GARAGEM ELEVADA
+					<a href="#" data-filter=".other">
+						Other
 					</a>
 				</div>
 			</div>
@@ -619,7 +802,7 @@
 									</foreignObject>
 								</switch>
 							</svg>
-						</div>	
+						</div>
 						<div class="col-lg-11 col-md-10 col-sm-12 col-xs-12">
 							<div class="caroufredsel enable-controls">
 								<div class="row">
@@ -1285,32 +1468,927 @@
 			</section>
 			<!--END Works section-->
 
-			<!-- BEGIN Plantas Outros -->
-			<div id="plantas-outros">
-				<div class="container">
+		</article>
+		<!--END Works-->
 
-					<div class="row">
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<h4>
-								projeto, realização, construção
-								<br />
-								e vendas:
-							</h4>
-							<img src="imagens/plantas-outros.png" alt="" />
+		<!--BEGIN Team-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with zoom-in animation effect upon first element viewing.
+				- with toggleable ratation hover effect
+				- with both link and plain wrappers
+
+			For supported social icon list one should see class reference sheet.
+
+		-->
+		<article class="team page-light-dose theme-white background foreground links" id="team">
+			<header class="text-center">
+				<div class="sect">
+					<div class="line line-left">
+					</div>
+					&sect;
+					<div class="line line-right">
+					</div>
+				</div>
+				<h2>
+					Team
+				</h2>
+			</header>
+			<div class="container">
+				<div class="row">
+
+					<!--BEGIN Team item-->
+					<div class="text-center col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+						<!--BEGIN Team item wrapper-->
+						<!--DESCRIPTION
+
+							This wrapper is designed:
+								- with hover animation
+								- without link
+						-->
+						<span class="wrapper img-circle">
+							<img class="zoomIn" src="img/light-dose/photo/team-photo-0.png" alt="" />
+							<span class="overlay img-circle">
+							</span>
+						</span>
+						<!--END Team item wrapper-->
+
+						<span class="caption color">
+							Michael Collins
+						</span>
+						<small>
+							Director
+						</small>
+						<p>
+							An active contributor to various open source projects, has given presentations at developer events.
+						</p>
+
+						<!--BEGIN Team item social-->
+						<ul class="list-inline grid social-small">
+							<li>
+								<a class="icon-facebook text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-twitter text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-google text-center" href="#">
+								</a>
+						</ul>
+						<!--END Team item social-->
+
+					</div>
+					<!--END Team item-->
+
+					<!--BEGIN Team item-->
+					<div class="text-center col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+						<!--BEGIN Team item wrapper-->
+						<!--DESCRIPTION
+
+							This wrapper is designed:
+								- without hover animation
+								- without link
+						-->
+						<span class="wrapper img-circle">
+							<img class="zoomIn transition-none" src="img/light-dose/photo/team-photo-1.png" alt="" />
+							<span class="overlay img-circle">
+							</span>
+						</span>
+						<!--END Team item wrapper-->
+
+						<span class="caption color">
+							Patrick Donalds
+						</span>
+						<small>
+							Creative director
+						</small>
+						<p>
+							Has great technical background, design sensibility, strong user experiences.
+						</p>
+
+						<!--BEGIN Team item social-->
+						<ul class="list-inline grid social-small">
+							<li>
+								<a class="icon-facebook text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-twitter text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-google text-center" href="#">
+								</a>
+						</ul>
+						<!--END Team item social-->
+
+					</div>
+					<!--END Team item-->
+
+					<span class="clearfix visible-sm">
+					</span>
+
+					<!--BEGIN Team item-->
+					<div class="text-center col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+						<!--BEGIN Team item wrapper-->
+						<!--DESCRIPTION
+
+							This wrapper is designed:
+								- with hover animation
+								- with link
+						-->
+						<a class="wrapper img-circle" href="blog.html">
+							<img class="zoomIn" src="img/light-dose/photo/team-photo-2.png" alt="" />
+							<span class="overlay img-circle">
+							</span>
+						</a>
+						<!--END Team item wrapper-->
+
+						<span class="caption color">
+							Mett Rayan
+						</span>
+						<small>
+							Manager
+						</small>
+						<p>
+							Has great technical background, design sensibility, strong user experiences.
+						</p>
+
+						<!--BEGIN Team item social-->
+						<ul class="list-inline grid social-small">
+							<li>
+								<a class="icon-facebook text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-twitter text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-google text-center" href="#">
+								</a>
+						</ul>
+						<!--END Team item social-->
+
+					</div>
+					<!--END Team item-->
+
+					<!--BEGIN Team item-->
+					<div class="text-center col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+						<!--BEGIN Team item wrapper-->
+						<!--DESCRIPTION
+
+							This wrapper is designed:
+								- without hover animation
+								- with link
+						-->
+						<a class="wrapper img-circle" href="blog.html">
+							<img class="zoomIn transition-none" src="img/light-dose/photo/team-photo-3.png" alt="" />
+							<span class="overlay img-circle">
+							</span>
+						</a>
+						<!--END Team item wrapper-->
+
+						<span class="caption color">
+							David Cohen
+						</span>
+						<small>
+							Developer
+						</small>
+						<p>
+							An expert on open data and open source software and has been featured in publications.
+						</p>
+
+						<!--BEGIN Team item social-->
+						<ul class="list-inline grid social-small">
+							<li>
+								<a class="icon-facebook text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-twitter text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-google text-center" href="#">
+								</a>
+						</ul>
+						<!--END Team item social-->
+
+					</div>
+					<!--END Team item-->
+
+				</div>
+			</div>
+		</article>
+		<!--END Team-->
+
+		<!--BEGIN Skills-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with colored progress circles
+
+		-->
+		<article class="skills page-light-dose theme-white background foreground links" id="skills">
+			<div class="container text-center">
+				<h5>
+					Professional Skills
+				</h5>
+
+				<div class="row">
+
+					<!--BEGIN Skills item-->
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" data-color="#EC4742">
+								<span class="sr-only">Axure</span>
+							</div>
 						</div>
-						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-							<h4>
-								Vendas:
-							</h4>
-							<img src="imagens/plantas-outros.png" alt="" />
+					</div>
+					<!--END Skills item-->
+
+					<!--BEGIN Skills item-->
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" data-color="#E97332">
+								<span class="sr-only">Photoshop</span>
+							</div>
+						</div>
+					</div>
+					<!--END Skills item-->
+
+					<!--BEGIN Skills item-->
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" data-color="#DEBD08">
+								<span class="sr-only">HTML</span>
+							</div>
+						</div>
+					</div>
+					<!--END Skills item-->
+
+					<!--BEGIN Skills item-->
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" data-color="#50A456">
+								<span class="sr-only">CSS</span>
+							</div>
+						</div>
+					</div>
+					<!--END Skills item-->
+
+					<div class="clearfix visible-sm">
+					</div>
+
+					<!--BEGIN Skills item-->
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" data-color="#2B5F96">
+								<span class="sr-only">JavaScript</span>
+							</div>
+						</div>
+					</div>
+					<!--END Skills item-->
+
+					<!--BEGIN Skills item-->
+					<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" data-color="#904AB2">
+								<span class="sr-only">Wordpress</span>
+							</div>
+						</div>
+					</div>
+					<!--END Skills item-->
+
+				</div>
+			</div>
+		</article>
+		<!--END Skills-->
+
+		<!--BEGIN Success Stories-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with parallax background, see DEMO styles for details.
+				- with content carousel and pagiation.
+
+		-->
+		<article class="stories page-light-dose theme-color background foreground links aparallax" id="stories">
+			<div class="underlay">
+				<header class="text-center">
+					<div class="sect">
+						<div class="line line-left">
+						</div>
+						&sect;
+						<div class="line line-right">
+						</div>
+					</div>
+					<h2>
+						Success Stories
+					</h2>
+					<h5>
+						We love our clients and they love us
+					</h5>
+				</header>
+				<div class="container">
+					<div class="controls">
+						<svg class="previous" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+							<switch>
+								<path fill-rule="evenodd" clip-rule="evenodd" fill="#000" d="M0,12L12.6,0L14,1.4L3.4,11.9L14,22.6L12.6,24L0,12"/>
+								<foreignObject width="24" height="24">
+									<img class="previous" src="img/icon-previous.png" alt="Previous" title="Previous" />
+								</foreignObject>
+							</switch>
+						</svg>
+						<svg class="next" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="24px" viewBox="0 0 14 24" enable-background="new 0 0 14 24" xml:space="preserve">
+							<switch>
+								<path fill-rule="evenodd" clip-rule="evenodd" fill="#000" d="M14,12L1.4,24L0,22.6l10.6-10.7L0,1.4L1.4,0L14,12"/>
+								<foreignObject width="24" height="24">
+									<img class="next" src="img/icon-next.png" alt="Next" title="Next" />
+								</foreignObject>
+							</switch>
+						</svg>
+					</div>
+					<div class="row">
+						<div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
+							<div class="caroufredsel enable-swipe enable-controls enable-pagination image-pagination">
+
+								<!--BEGIN Success Stories item-->
+								<div class="row" data-image="img/light-dose/stories-logo3.png">
+									<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+										<div>
+											<strong>
+												Client:
+											</strong>
+										</div>
+										<div>
+											Mark Example,
+										</div>
+										<em>
+											Best Internet Company
+										</em>
+									</div>
+									<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+										Praesent tristique volutpat mollis. Pellentesque egestas sapien neque, eget laoreet libero ullamcorper et. Donec in sapien a dui suscipit semper. Praesent tellus lacus, egestas ut molestie at, semper eget nibh. Praesent quis luctus diam. Nunc laoreet auctor sagittis. Donec sed ante venenatis, pellentesque lorem in, elementum diam. Nunc sit amet lorem faucibus, posuere tellus feugiat, pretium arcu.
+									</div>
+									<div class="clearfix">
+									</div>
+								</div>
+								<!--END Success Stories item-->
+
+								<!--BEGIN Success Stories item-->
+								<div class="row" data-image="img/light-dose/stories-logo1.png">
+									<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+										<div>
+											<strong>
+												Client:
+											</strong>
+										</div>
+										<div>
+											Mark Example,
+										</div>
+										<em>
+											Best Internet Company
+										</em>
+									</div>
+									<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+										Praesent tristique volutpat mollis. Pellentesque egestas sapien neque, eget laoreet libero ullamcorper et. Donec in sapien a dui suscipit semper. Praesent tellus lacus, egestas ut molestie at, semper eget nibh. Praesent quis luctus diam. Nunc laoreet auctor sagittis. Donec sed ante venenatis, pellentesque lorem in, elementum diam. Nunc sit amet lorem faucibus, posuere tellus feugiat, pretium arcu.
+									</div>
+									<div class="clearfix">
+									</div>
+								</div>
+								<!--END Success Stories item-->
+
+								<!--BEGIN Success Stories item-->
+								<div class="row" data-image="img/light-dose/stories-logo2.png">
+									<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+										<div>
+											<strong>
+												Client:
+											</strong>
+										</div>
+										<div>
+											Mark Example,
+										</div>
+										<em>
+											Best Internet Company
+										</em>
+									</div>
+									<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+										Praesent tristique volutpat mollis. Pellentesque egestas sapien neque, eget laoreet libero ullamcorper et. Donec in sapien a dui suscipit semper. Praesent tellus lacus, egestas ut molestie at, semper eget nibh. Praesent quis luctus diam. Nunc laoreet auctor sagittis. Donec sed ante venenatis, pellentesque lorem in, elementum diam. Nunc sit amet lorem faucibus, posuere tellus feugiat, pretium arcu.
+									</div>
+									<div class="clearfix">
+									</div>
+								</div>
+								<!--END Success Stories item-->
+
+								<!--BEGIN Success Stories item-->
+								<div class="row" data-image="img/light-dose/stories-logo0.png">
+									<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+										<div>
+											<strong>
+												Client:
+											</strong>
+										</div>
+										<div>
+											Mark Example,
+										</div>
+										<em>
+											Best Internet Company
+										</em>
+									</div>
+									<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+										Praesent tristique volutpat mollis. Pellentesque egestas sapien neque, eget laoreet libero ullamcorper et. Donec in sapien a dui suscipit semper. Praesent tellus lacus, egestas ut molestie at, semper eget nibh. Praesent quis luctus diam. Nunc laoreet auctor sagittis. Donec sed ante venenatis, pellentesque lorem in, elementum diam. Nunc sit amet lorem faucibus, posuere tellus feugiat, pretium arcu.
+									</div>
+									<div class="clearfix">
+									</div>
+								</div>
+								<!--END Success Stories item-->
+
+							</div>
+						</div>
+					</div>
+					<ul class="pagination grid list-inline text-center">
+					</ul>
+				</div>
+			</div>
+		</article>
+		<!--END Success Stories-->
+
+		<!--BEGIN Last Posts-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with content carousel for blog posts.
+
+		-->
+		<article class="posts page-light-dose theme-white background foreground links" id="posts">
+			<header class="text-center">
+				<div class="sect">
+					<div class="line line-left">
+					</div>
+					&sect;
+					<div class="line line-right">
+					</div>
+				</div>
+				<h2>
+					Last Posts
+				</h2>
+			</header>
+			<div class="container">
+				<div class="controls">
+					<svg class="previous" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+						<switch>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#000" d="M0,12L12.6,0L14,1.4L3.4,11.9L14,22.6L12.6,24L0,12"/>
+							<foreignObject width="24" height="24">
+								<img class="previous" src="img/icon-previous.png" alt="Previous" title="Previous" />
+							</foreignObject>
+						</switch>
+					</svg>
+					<svg class="next" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="24px" viewBox="0 0 14 24" enable-background="new 0 0 14 24" xml:space="preserve">
+						<switch>
+							<path fill-rule="evenodd" clip-rule="evenodd" fill="#000" d="M14,12L1.4,24L0,22.6l10.6-10.7L0,1.4L1.4,0L14,12"/>
+							<foreignObject width="24" height="24">
+								<img class="next" src="img/icon-next.png" alt="Next" title="Next" />
+							</foreignObject>
+						</switch>
+					</svg>
+				</div>
+				<div class="row">
+					<div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
+						<div class="caroufredsel enable-swipe enable-controls">
+
+							<!--BEGIN Last Posts item-->
+							<div class="row">
+								<div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-12 col-xs-12">
+									<a href="blog.html#blog">
+										<h5>
+											Welcome to «Itembridge»
+										</h5>
+									</a>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+									<div>
+										<small class="date">
+											13/09/2013,
+										</small>
+									</div>
+									<div>
+										<small class="author">
+											writted by Michael Collins
+										</small>
+									</div>
+								</div>
+								<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+									<p>
+										Our сompany became famous among thousands of visitors and purchasers of the most known online resource copyright works during the short period of its existence. Our сompany offers a number of creative products such as: online stores templates, one page promo sites, graphic works and corporate style for the wide audience.
+									</p>
+									<a class="more" href="post.html">
+										Read More
+										<div class="arrow">
+											<span class="tip">
+											</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!--END Last Posts item-->
+
+							<!--BEGIN Last Posts item-->
+							<div class="row">
+								<div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-12 col-xs-12">
+									<a href="blog.html#blog">
+										<h5>
+											«The Hobbit 2» Premiere
+										</h5>
+									</a>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+									<div>
+										<small class="date">
+											12/09/2013,
+										</small>
+									</div>
+									<div>
+										<small class="author">
+											writted by Patrick Donalds
+										</small>
+									</div>
+								</div>
+								<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+									<p>
+										The Hobbit: The Desolation of Smaug is an upcoming 2013 epic fantasy adventure film co-written, produced and directed by Peter Jackson. It is the second installment of a three-part film series based on J. R. R. Tolkien's 1937 novel The Hobbit, beginning with An Unexpected Journey (2012) and set to conclude with There and Back Again (2014). The three films together act as prequels to Jackson's The Lord of the Rings film series.
+									</p>
+									<a class="more" href="post.html">
+										Read More
+										<div class="arrow">
+											<span class="tip">
+											</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!--END Last Posts item-->
+
+							<!--BEGIN Last Posts item-->
+							<div class="row">
+								<div class="col-lg-offset-2 col-lg-10 col-md-offset-2 col-md-10 col-sm-12 col-xs-12">
+									<a href="blog.html#blog">
+										<h5>
+											The 2013 Best Food Blog Awards
+										</h5>
+									</a>
+								</div>
+								<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-left text-right-md">
+									<div>
+										<small class="date">
+											11/09/2013,
+										</small>
+									</div>
+									<div>
+										<small class="author">
+											writted by Mett Rayan
+										</small>
+									</div>
+								</div>
+								<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+									<img class="img-responsive" src="img/light-dose/blog/blog-4.jpg" alt="blog-4" />
+									<p>
+										Our ongoing mission is to chronicle a world of authentic cuisine, so we find what we're looking for more and more in one place: online food blogs.
+									</p>
+									<a class="more" href="post.html">
+										Read More
+										<div class="arrow">
+											<span class="tip">
+											</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!--END Last Posts item-->
+
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- END Plantas Outros -->
-
 		</article>
-		<!--END Works-->
+		<!--END Last Posts-->
+
+		<!--BEGIN Action-->
+		<!--DESCRIPTION
+
+			Just a simple text block with a button.
+
+		-->
+		<article class="action page-light-dose theme-color background foreground links aparallax" id="action">
+			<div class="underlay">
+				<div class="container">
+					<h5 class="text-center">
+						<strong>
+							Some call to action block
+						</strong>
+					</h5>
+					<div class="row">
+						<div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-12">
+							<p>
+								Mauris sed mi eget justo fermentum feugiat. Curabitur aliquam, leo nec adipiscing vehicula, sapien massa porta augue, non tristique risus lorem imperdiet tortor. Nulla sodales enim ut massa ultricies.
+							</p>
+						</div>
+						<div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-12 text-center">
+							<a class="scroll btn" href="#contacts">
+								Get in Touch
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+		<!--END Action-->
+
+		<!--BEGIN FAQ-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with toggleble accordions
+
+		-->
+		<article class="faq page-light-dose theme-white background foreground links" id="faq">
+			<header class="text-center">
+				<div class="sect">
+					<div class="line line-left">
+					</div>
+					&sect;
+					<div class="line line-right">
+					</div>
+				</div>
+				<h2>
+					FAQ
+				</h2>
+			</header>
+			<div class="container">
+				<div class="row">
+
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+						<!--BEGIN FAQ item-->
+						<div class="accordion open">
+							<div class="caption-wrapper">
+								<span class="caption">
+									Curabitur feugiat arcu ligula?
+								</span>
+								<div class="line">
+								</div>
+								<span class="sign pull-right">
+								</span>
+							</div>
+							<div class="contents">
+								Curabitur dolor nibh, pharetra et pellentesque eget, tristique ut nulla. Mauris pretium ornare ante, sed rutrum tellus bibendum et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							</div>
+						</div>
+						<!--END FAQ item-->
+
+						<!--BEGIN FAQ item-->
+						<div class="accordion">
+							<div class="caption-wrapper">
+								<span class="caption">
+									Praesent tristique volutpat mollis. Pellentesque egestas sapien neque, eget laoreet?
+								</span>
+								<div class="line">
+								</div>
+								<span class="sign pull-right">
+								</span>
+							</div>
+							<div class="contents">
+								Curabitur dolor nibh, pharetra et pellentesque eget, tristique ut nulla. Mauris pretium ornare ante, sed rutrum tellus bibendum et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							</div>
+						</div>
+						<!--END FAQ item-->
+
+						<!--BEGIN FAQ item-->
+						<div class="accordion">
+							<div class="caption-wrapper">
+								<span class="caption">
+									Duis interdum tincidunt nibh et malesuada?
+								</span>
+								<div class="line">
+								</div>
+								<span class="sign pull-right">
+								</span>
+							</div>
+							<div class="contents">
+								Curabitur dolor nibh, pharetra et pellentesque eget, tristique ut nulla. Mauris pretium ornare ante, sed rutrum tellus bibendum et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							</div>
+						</div>
+						<!--END FAQ item-->
+
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+						<!--BEGIN FAQ item-->
+						<div class="accordion">
+							<div class="caption-wrapper">
+								<span class="caption">
+									Curabitur feugiat arcu ligula?
+								</span>
+								<div class="line">
+								</div>
+								<span class="sign pull-right">
+								</span>
+							</div>
+							<div class="contents">
+								Curabitur dolor nibh, pharetra et pellentesque eget, tristique ut nulla. Mauris pretium ornare ante, sed rutrum tellus bibendum et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							</div>
+						</div>
+						<!--END FAQ item-->
+
+						<!--BEGIN FAQ item-->
+						<div class="accordion">
+							<div class="caption-wrapper">
+								<span class="caption">
+									Praesent tristique volutpat mollis. Pellentesque egestas sapien neque, eget laoreet?								</span>
+								<div class="line">
+								</div>
+								<span class="sign pull-right">
+								</span>
+							</div>
+							<div class="contents">
+								Curabitur dolor nibh, pharetra et pellentesque eget, tristique ut nulla. Mauris pretium ornare ante, sed rutrum tellus bibendum et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							</div>
+						</div>
+						<!--END FAQ item-->
+
+						<!--BEGIN FAQ item-->
+						<div class="accordion">
+							<div class="caption-wrapper">
+								<span class="caption">
+									Duis interdum tincidunt nibh et malesuada?
+								</span>
+								<div class="line">
+								</div>
+								<span class="sign pull-right">
+								</span>
+							</div>
+							<div class="contents">
+								Curabitur dolor nibh, pharetra et pellentesque eget, tristique ut nulla. Mauris pretium ornare ante, sed rutrum tellus bibendum et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+							</div>
+						</div>
+						<!--END FAQ item-->
+
+					</div>
+
+				</div>
+			</div>
+		</article>
+		<!--END FAQ-->
+
+		<!--BEGIN Pricing-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with parallax background, see DEMO styles for details.
+				- with simple-colored package blocks.
+		-->
+		<article class="pricing page-light-dose theme-color background foreground links aparallax" id="pricing">
+			<div class="underlay">
+				<header class="text-center">
+					<div class="sect">
+						<div class="line line-left">
+						</div>
+						&sect;
+						<div class="line line-right">
+						</div>
+					</div>
+					<h2>
+						Pricing
+					</h2>
+					<h5>
+						Choose one of the packages
+					</h5>
+				</header>
+				<div class="container">
+					<div class="row">
+
+						<!--BEGIN Pricing package-->
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<a class="package" data-color="#E0302A" href="#">
+								<div class="caption">
+									<span class="fa text-center">
+										&#xf072;
+									</span>
+									<h5>
+										Basic package
+									</h5>
+								</div>
+								<ul class="features text-center">
+									<li>
+										Duis tincidunt erat quam
+									<li>
+										Etiam placerat sapien
+									<li>
+										Aliquam libero est
+								</ul>
+							</a>
+						</div>
+						<!--END Pricing package-->
+
+						<!--BEGIN Pricing package-->
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<a class="package" data-color="#CF7A00" href="#">
+								<div class="caption">
+									<span class="fa text-center">
+										&#xf0d6;
+									</span>
+									<h5>
+										Business package
+									</h5>
+								</div>
+								<ul class="features text-center">
+									<li>
+										Duis tincidunt erat quam
+									<li>
+										Etiam placerat sapien
+									<li>
+										Aliquam libero est
+									<li>
+										Quisque et porta neque
+								</ul>
+							</a>
+						</div>
+						<!--END Pricing package-->
+
+						<!--BEGIN Pricing package-->
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<a class="package" data-color="#117919" href="#">
+								<div class="caption">
+									<span class="fa text-center">
+										&#xf091;
+									</span>
+									<h5>
+										Gold package
+									</h5>
+								</div>
+								<ul class="features text-center">
+									<li>
+										Duis tincidunt erat quam
+									<li>
+										Etiam placerat sapien
+									<li>
+										Aliquam libero est
+									<li>
+										Quisque et porta neque
+									<li>
+										Donec sed pretium eros
+								</ul>
+							</a>
+						</div>
+						<!--END Pricing package-->
+
+					</div>
+				</div>
+			</div>
+		</article>
+		<!--END Pricing-->
+
+		<!--BEGIN Video-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with embedded responsive video
+
+		-->
+		<article class="video page-light-dose theme-white background foreground links" id="video">
+			<header class="text-center">
+				<div class="sect">
+					<div class="line line-left">
+					</div>
+					&sect;
+					<div class="line line-right">
+					</div>
+				</div>
+				<h2>
+					Video Tour
+				</h2>
+			</header>
+			<div class="container">
+				<div class="row">
+
+					<!--BEGIN Video container-->
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 video-container">
+						<iframe src="http://player.vimeo.com/video/76990578" width="500" height="281"></iframe>
+					</div>
+					<!--END Video container-->
+
+					<!--BEGIN Video description-->
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<p><a href="http://vimeo.com/76990578">Unleashed: Menswear Dog</a> from <a href="http://vimeo.com/bluechalk">Blue Chalk</a> on <a href="https://vimeo.com">Vimeo</a>.</p> <p>When David Fung and wife Yena Kim decided on a whim to create a Tumblr featuring their adorable shiba inu dog, Bodhi, dressed in sophisticated menswear, little did they know that they would soon be leaving their full time jobs to author a book and start a canine fashion line.<br /> <br /> Producer: Catherine Yrisarri<br /> Director of Photography, Editor: Rob Finch<br /> Executive Producer: Greg Moyer<br /> Motion Graphics: Drew Jordan<br /> Assistant Camera: Tim Trotman<br /> Sound Mix: Chip Sloan<br /> Still Photography: Menswear Dog <br /> <br /> Created by Blue Chalk Media (http://www.bluechalk.com)<br /> <br /> Related Link: Menswear Dog (http://mensweardog.tumblr.com)</p>
+					</div>
+					<!--END Video description-->
+
+				</div>
+			</div>
+		</article>
+		<!--END Video-->
 
 		<!--BEGIN Contacts-->
 		<!--DESCRIPTION
@@ -1323,8 +2401,15 @@
 		<article class="contacts page-light-dose theme-color background foreground links aparallax" id="contacts">
 			<div class="underlay">
 				<header class="text-center light">
+					<div class="sect">
+						<div class="line line-left">
+						</div>
+						&sect;
+						<div class="line line-right">
+						</div>
+					</div>
 					<h2>
-						CONTATO
+						Contacts
 					</h2>
 				</header>
 				<div class="container">
@@ -1352,7 +2437,7 @@
 								<div class="overlay">
 								</div>
 								<p>
-									LIGUE PARA NÓS: 21 1234-5678
+									Call Us +777 (100) 1234
 								</p>
 							</a>
 						</div>
@@ -1371,7 +2456,7 @@
 								<div class="overlay">
 								</div>
 								<address>
-									MAIL@MAIL.COM.BR
+									mail@example.com
 								</address>
 							</a>
 						</div>
@@ -1390,9 +2475,9 @@
 								<div class="overlay">
 								</div>
 								<address>
-									RUA TAL, Nº 123
+									49 Archdale, 2B Charleston,
 									<br />
-									TERESÓPOLIS - RJ
+									New York City, USA
 								</address>
 							</a>
 						</div>
@@ -1403,17 +2488,17 @@
 					<!--BEGIN Contacts form-->
 					<form name="feedbackForm" method="POST" action="/" class="small text-center validator">
 						<h4>
-							ENVIE SUA MENSAGEM
+							Say Hello
 						</h4>
 						<ul class="list-inline grid">
 							<li>
-								<input name="feedbackFormName" type="text" class="form-control" placeholder="NOME" data-validator="required|alpha_numeric">
+								<input name="feedbackFormName" type="text" class="form-control" placeholder="Name" data-validator="required|alpha_numeric">
 							<li>
-								<input name="feedbackFormEmail" type="text" class="form-control" placeholder="E-MAIL" data-validator="required|valid_email">
+								<input name="feedbackFormEmail" type="text" class="form-control" placeholder="Email" data-validator="required|valid_email">
 							<li>
-								<textarea name="feedbackFormComment" class="form-control" placeholder="MENSAGEM" data-validator="required"></textarea>
+								<textarea name="feedbackFormComment" class="form-control" placeholder="Comment" data-validator="required"></textarea>
 						</ul>
-						<input name="Submit" type="submit" class="btn btn-default" value="ENVIAR" />
+						<input name="Submit" type="submit" class="btn btn-default" value="Submit" />
 					</form>
 					<!--END Contacts form-->
 
@@ -1422,7 +2507,119 @@
 		</article>
 		<!--END Contacts-->
 
-		
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+		<!--BEGIN Footer-->
+		<footer class="footer theme-color background foreground text-center">
+			<div class="container">
+				<ul class="list-inline nav-footer">
+					<li>
+						<a class="scroll" href="index.html#body">
+							Home
+						</a>
+					<li>
+						<a class="scroll" href="index.html#about">
+							About
+						</a>
+					<li>
+						<a class="scroll" href="index.html#services">
+							Services
+						</a>
+					<li>
+						<a class="scroll" href="index.html#works">
+							Works
+						</a>
+					<li>
+						<a class="scroll" href="index.html#team">
+							Team
+						</a>
+					<li>
+						<a class="scroll" href="index.html#contacts">
+							Contacts
+						</a>
+					<li>
+						<a class="scroll" href="blog.html#blog">
+							Blog
+						</a>
+					<li>
+						<a class="scroll" href="login.html">
+							Login
+						</a>
+					<li>
+						<a class="scroll" href="post.html">
+							Post
+						</a>
+					<li>
+						<a class="scroll" href="typography.html">
+							Typography
+						</a>
+					<li>
+						<a class="scroll" href="register.html">
+							Register
+						</a>
+				</ul>
+				<div class="copyright">
+					Copyright &copy; ItemBridge Inc. 2013
+					<div class="sect">
+						&sect;
+					</div>
+				</div>
+				<div class="inner-wrapper text-center stretch-width">
+					<div>
+						<!--BEGIN Footer social-->
+						<!--DESCRIPTION
+
+							For supported social icon list one should see class reference sheet.
+
+						-->
+						<ul class="list-inline grid reverse social">
+							<li>
+								<a class="icon-reddit text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-digg text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-linkedin text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-facebook text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-twitter text-center" href="#">
+								</a>
+							<li>
+								<a class="icon-google text-center" href="#">
+								</a>
+						</ul>
+						<!--END Footer social-->
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--END Footer-->
+
+		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+			<div class="slides">
+			</div>
+			<h3 class="title">
+			</h3>
+			<a class="prev">
+				‹
+			</a>
+			<a class="next">
+				›
+			</a>
+			<a class="close">
+				×
+			</a>
+			<a class="play-pause">
+			</a>
+			<ol class="indicator">
+			</ol>
+		</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
@@ -1434,7 +2631,7 @@
 		<script type="text/javascript" src="js/helper-plugins/jquery.mousewheel.min.js"></script>
 		<script type="text/javascript" src="js/helper-plugins/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="js/helper-plugins/jquery.transit.min.js"></script>
-		<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+		<!--<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>-->
 
 		<script type="text/javascript" src="js/jquery.customSelect.min.js"></script>
 

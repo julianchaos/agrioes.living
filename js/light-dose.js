@@ -1020,18 +1020,6 @@ var delay = ( function() {
 			}
 		};
 
-		function setText() {
-			if( $( '.data-short' ).text() != _.items.eq( _.current ).attr( 'data-short' ) )
-				$( '.data-short' ).fadeOut( _.options.speed / 2, function() {
-					$( '.data-short' ).text( _.items.eq( _.current ).attr( 'data-short' ) );
-					$( '.data-short' ).fadeIn( _.options.speed / 2 );
-				} );
-			if( $( '.data-full' ).text() != _.items.eq( _.current ).attr( 'data-full' ) )
-				$( '.data-full' ).fadeOut( _.options.speed / 2, function() {
-					$( '.data-full' ).text( _.items.eq( _.current ).attr( 'data-full' ) );
-					$( '.data-full' ).fadeIn( _.options.speed / 2 );
-				} );
-		}
 		//  Move Aslider to a slide index
 		this.move = function( index ) {
 			if( this.current != index && !this.moving ) {
@@ -1053,13 +1041,12 @@ var delay = ( function() {
 						//};
 						_.current = index;
 						_.last = index;
-						setText();
+						//setText();
 						_.moving = false;
 					} );
 				}
 				else {
 					_.current = index;
-					setText();
 					_.moving = false;
 				}
 				if( !this.element.is( ':animated' ) ) {

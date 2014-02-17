@@ -23,8 +23,8 @@
 /*                               GLOBAL                               */
 /*--------------------------------------------------------------------*/
 body {
-	color: #000;
-	background-color: #FFF;
+	color: #FFF;
+	background-color: #1C1A1B;
 	font-family: 'Lato', 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', sans-serif;
 	font-size: 16px; /* 100% 1em */
 	font-style: normal;
@@ -159,7 +159,7 @@ article header {
 	right: 0;
 	left: 0;
 	width: 100%;
-	height: 80px;
+	height: 100px;
 	z-index: 3;
 
 	-webkit-transition:
@@ -172,6 +172,8 @@ article header {
 		height 0.25s ease;
 	transition:
 		height 0.25s ease;
+
+	background-image: url('../imagens/menu-bg.png');
 }
 .topper .nav > li > a {
 	padding-bottom: 12px;
@@ -197,7 +199,7 @@ article header {
 	text-shadow: none;
 }
 .navbar-nav {
-	margin-top: 28px;
+	margin-top: 40px;
 	float: none;
 	clear: both;
 	font-size: 93.75%;
@@ -211,7 +213,7 @@ article header {
 	border: none !important;
 }
 .topper .menu-toggle {
-	margin: 25px 0 0;
+	margin: 40px 0 0;
 	font-size: 184%; /* 29.44px */
 	background-color: transparent;
 	border: none;
@@ -1287,14 +1289,11 @@ form .radio.disabled > label {
 .theme-white {
 	/*	*/
 }
-.theme-white.background {
-	background-color: #FFF;
-}
 .theme-white.foreground {
-	color: rgba( 0, 0, 0, 0.8 );
+	color: #FFF;
 }
 .theme-white.foreground .caption.color {
-	color: #054383;
+	/*color: #054383;*/
 }
 .theme-white.links a {
 	color: #054383;
@@ -1441,7 +1440,7 @@ form .radio.disabled > label {
 }
 .theme-white.topper,
 .theme-white.topper .menu.menu-dropdown {
-	border-bottom: 2px rgba( 0, 0, 0, 0.05 ) solid;
+	box-shadow: 0 0 6px #000;
 }
 .theme-white .logo div {
 	color: #999;
@@ -1459,7 +1458,7 @@ form .radio.disabled > label {
 .theme-white .nav > li > a:link,
 .theme-white .nav > li > a:visited,
 .theme-white .menu.menu-dropdown > li > a {
-	color: #999;
+	color: #ffffff;
 }
 .theme-white .menu.menu-dropdown > .active > a {
 	border-bottom: 2px rgba( 5, 67, 131, 0.3 ) solid !important;
@@ -1582,13 +1581,10 @@ form .radio.disabled > label {
 	color: #054383;
 	background-color: #FFF;
 }
-.theme-white.skills .container,
-.theme-white.facts .container {
-	border-top-color: #E9E9E9;
-}
+
 .theme-white.skills .container h5,
 .theme-white.facts .container h5 {
-	color: #777;
+	color: #FFF;
 }
 .theme-white.posts .date {
 	color: #999;
@@ -1633,10 +1629,10 @@ form .radio.disabled > label {
 	fill: #000 !important;
 }
 .theme-white.facts .counter .value {
-	color: #555;
+	color: #FFF;
 }
 .theme-white.facts .counter small {
-	color: #777;
+	color: #FFF;
 }
 	/*
 		BOOTSTRAP
@@ -1800,7 +1796,7 @@ form .radio.disabled > label {
 	color: #FFF !important;
 }
 .theme-color .underlay {
-	background-color: rgba( 5, 67, 131, 0.95 );
+	background-color: rgba( 28,26,27, 0.95 );
 }
 .theme-color.action .underlay {
 	background-color: rgba( 0, 0, 0, 0.9 );
@@ -2277,8 +2273,16 @@ form .radio.disabled > label {
 /*--------------------------------------------------------------------*/
 /*                               ABOUT                                */
 /*--------------------------------------------------------------------*/
+
+.about h5 {
+	margin-bottom: 0;
+}
 .about .row {
-	margin-bottom: 25px;
+	max-width: 960px;
+	margin: 0 auto 25px;
+}
+.about .col-md-3 {
+	width: 50%;
 }
 .about a {
 	display: block;
@@ -2293,23 +2297,28 @@ form .radio.disabled > label {
 	float: none;
 	clear: both;
 }
-.about .caption {
-	margin-bottom: 20px;
-	display: block;
-	text-transform: uppercase;
-}
+
 /*--------------------------------------------------------------------*/
 /*                               FACTS                                */
 /*--------------------------------------------------------------------*/
-.facts .fa {
-	position: relative;
-	bottom: 5px;
-	padding-right: 10px;
-	font-size: 500%;
+.facts {
+	background-image: url('../imagens/mais-bg.png');
 }
+
 .facts .counter {
 	display: inline-block;
 	vertical-align: baseline;
+	background-repeat: no-repeat;
+	padding-left: 80px;
+}
+.facts .restaurantes {
+	background-image: url('../imagens/restaurantes-icon.png');
+}
+.facts .agencias {
+	background-image: url('../imagens/agencias-icon.png');
+}
+.facts .mercados {
+	background-image: url('../imagens/mercados-icon.png');
 }
 .facts .counter .value {
 	display: block;
@@ -2320,10 +2329,7 @@ form .radio.disabled > label {
 .facts .counter small {
 	font-weight: 400;
 }
-.facts .container {
-	border-top-width: 1px;
-	border-top-style: solid;
-}
+
 .facts .container h5 {
 	padding-top: 45px;
 	padding-bottom: 30px;
@@ -2358,8 +2364,14 @@ form .radio.disabled > label {
 /*--------------------------------------------------------------------*/
 /*                               WORKS                                */
 /*--------------------------------------------------------------------*/
+.works {
+	background-color: #1c1a1b;
+}
 .works header {
 	padding-bottom: 54px;
+}
+.works .grid-filter a {
+	color: #FFF !important;
 }
 .works .grid {
 	display: block;
@@ -2441,6 +2453,26 @@ form .radio.disabled > label {
 .works .meta-wrapper {
 	margin-bottom: 25px;
 }
+
+.works #plantas-outros h4 {
+	min-height: 64px;
+}
+.works #plantas-outros {
+	background: transparent url('../imagens/infos-bg.png') no-repeat 0 67px;
+	min-height: 826px;
+}
+.works #plantas-outros .row {
+	max-width: 960px;
+	margin: 125px auto 25px;
+}
+.works #plantas-outros .col-md-3 {
+	position: relative;
+	width: 50%;
+	text-align: center;
+}
+
+
+
 /*--------------------------------------------------------------------*/
 /*                                TEAM                                */
 /*--------------------------------------------------------------------*/
@@ -2514,6 +2546,13 @@ form .radio.disabled > label {
 /*--------------------------------------------------------------------*/
 /*                              CONTACTS                              */
 /*--------------------------------------------------------------------*/
+	.contacts {
+		background-image: url( '../imagens/background-contacts.jpg' );
+	}
+	.contacts h2 {
+		margin-top:0;
+		padding-top: 40px;
+	}
 .contacts .row a {
 	display: block;
 	position: relative;
@@ -2986,7 +3025,6 @@ form .radio.disabled > label {
 	display: inline-block;
 	position: relative;
 	min-width: 170px;
-	margin-top: 27px;
 }
 .logo .image {
 	padding-right: 5px;
@@ -3531,7 +3569,7 @@ ol.commentlist li ol.commentlist {
 	*/
 	@media ( min-width: 1200px ) {
 		article header {
-			padding: 95px 0 105px;
+			padding: 0 0 105px;
 		}
 		header > h2 {
 			margin-top: 40px;
