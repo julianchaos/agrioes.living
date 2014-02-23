@@ -3,23 +3,36 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Agriões Living</title>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 		<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
 		<link rel="stylesheet" media="screen" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
 		<link rel="stylesheet" media="screen" href="css/social-icons.css" />
-		<link rel="stylesheet" media="screen" href="css/my.css" />
+		<link rel="stylesheet" media="screen" href="css/light-dose.css" />
+		<!-- <link rel="stylesheet" media="screen" href="css/demo.css" /> -->
 		<!--[if IE 8]>
 			<link rel="stylesheet" type="text/css" href="css/light-dose-ie8.css" />
 		<![endif]-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
 	</head>
 	<body>
+
+		<!--BEGIN Preloader-->
+		<!--DESCRIPTION
+			Spinner configuration can be changed using:
+				http://fgnass.github.io/spin.js/
+			After configuration <Spinner options> section should be replaced with desired options.
+		-->
 		<script type="text/javascript" src="js/spin.min.js" charset="utf-8"></script>
 		<script type="text/javascript">
 			var element = document.createElement( 'div' );
@@ -36,6 +49,7 @@
 			document.body.appendChild( element );
 			//	Starting a spin
 
+			//<!--BEGIN Spinner options-->
 			var opts = {
 			  lines: 7, // The number of lines to draw
 			  length: 0, // The length of each line
@@ -54,15 +68,21 @@
 			  top: 'auto', // Top position relative to parent in px
 			  left: 'auto' // Left position relative to parent in px
 			};
+			//<!--END Spinner options-->
 			var target = document.getElementById( 'spin' );
 			var spinner = new Spinner( opts ).spin( target );
 		</script>
+		<!--END	Preloader-->
+		
+		<!--BEGIN Topper-->
 		<header class="theme-white background foreground topper" id="navigation">
 			<div class="container stretch-height text-right">
 				<a class="logo scroll stretch-height pull-left text-left" href="index.html#slider">
+					<!--BEGIN Logo image-->
 					<div class="image pull-left">
 						<img src="imagens/logo.png" alt="" />
 					</div>
+					<!--END Logo image-->
 				</a>
 				<button type="button" class="menu-toggle fa">
 					&#xf0c9;
@@ -70,6 +90,7 @@
 				<div class="menu">
 					<div class="stretch-both">
 
+						<!--BEGIN Topper menu-->
 						<ul class="nav list-inline navbar-nav scale-up">
 							<li>
 								<a class="scroll" href="#slider">
@@ -102,12 +123,20 @@
 									</div>
 								</a>
 						</ul>
+						<!--END Topper menu-->
 
 					</div>
 				</div>
 			</div>
 		</header>
-		
+		<!--END Topper-->
+
+		<!--BEGIN Slider-->
+		<!--DESCRIPTION
+
+			This article is designed as a slider-only.
+
+		-->
 		<article class="slider theme-color foreground">
 			<div class="text-center" id="slider">
 				<div class="inner-wrapper stretch-both">
@@ -116,9 +145,20 @@
 							<h1 class="data-short">
 								AGRIÕES LIVING
 							</h1>
+
+
+							<!--BEGIN Slider caption-->
+							<!--DESCRIPTION
+
+								Here initial text below logo is set.
+								It can be altered for any slide in <Slider images> section via 'alt' attribute.
+
+							-->
 							<h4 class="data-full">&nbsp;
 								
 							</h4>
+							<!--END Slider caption-->
+
 						</div>
 						<a class="btn scroll" href="#plantas">
 							CONHEÇA AS PLANTAS
@@ -126,14 +166,55 @@
 					</div>
 				</div>
 
+				<!--BEGIN Slider images-->
+				<!--DESCRIPTION
+
+					Text in .data-short and .data-full will change only if attributes on slides differ
+					 from original value.
+
+				-->
+				<!--
+				<video class="slide" muted="muted" loop preload autoplay data-short="Light Dose" data-full="Flat & Minimal One Page Responsive Template">
+					<source src="http://wordpress.horn.itembridge.com/2/wp-content/uploads/2013/12/Welcome_to_Mexico_720p.mp4" type="video/mp4">
+					<source src="http://wordpress.horn.itembridge.com/2/wp-content/uploads/2013/12/Welcome_to_Mexico_720p.webm" type="video/webm">
+					<source src="http://wordpress.horn.itembridge.com/2/wp-content/uploads/2013/12/Welcome_to_Mexico_720p.ogv" type="video/ogg">
+					<img class="fallback" src="img/light-dose/slider/1.jpg" alt="video" />
+				</video>
+				-->
 				<img class="slide" src="img/light-dose/slider/1.jpg" alt="" />
 				<img class="slide" src="img/light-dose/slider/2.jpg" alt="" />
 				<img class="slide" src="img/light-dose/slider/3.jpg" alt="" />
                 <img class="slide" src="img/light-dose/slider/4.jpg" alt="" />
 
+				<!--
+				Flat & Minimal One Page Responsive Template
+				-->
+				<!--d
+				<img src="img/light-dose/slider/slider-image-0-low.jpg" data-short="No Line on the Horizon" data-full="is the twelfth studio album by rock band U2. Released on 27 February 2009, it was the band's first record since How to Dismantle an Atomic Bomb (2004), marking the longest gap between studio albums of U2's career." />
+				<img src="img/light-dose/slider/slider-image-1-low.jpg" data-short="The Shawshank Redemption" data-full="American drama film written and directed by Frank Darabont and starring Tim Robbins and Morgan Freeman." />
+				<img src="img/light-dose/slider/slider-image-2-low.jpg" data-short="Il buono, il brutto, il cattivo" data-full="Tra i più celebri film western della storia del cinema, è considerato la quintessenza del fortunato genere spaghetti-western." />
+				<img src="img/light-dose/slider/slider-image-3-low.jpg" data-short="Raiders of the Lost Ark" data-full="American fantasy-adventure film directed by Steven Spielberg, produced by George Lucas, and starring Harrison Ford." />
+				<img src="img/light-dose/slider/slider-image-4-low.jpg" data-short="Le fabuleux destin d'Amélie Poulain" data-full="romantic comedy film directed by Jean-Pierre Jeunet. Written by Jeunet with Guillaume Laurant, the film is a whimsical depiction of contemporary Parisian life, set in Montmartre." />
+				<img src="img/light-dose/slider/slider-image-5-low.jpg" data-short="Eternal Sunshine of the Spotless Mind" data-full="American romantic comedy-drama science fiction film about an estranged couple who have each other erased from their memories, scripted by Charlie Kaufman and directed by the French director, Michel Gondry." />
+				<img src="img/light-dose/slider/slider-image-6-low.jpg" data-short="The story of the friendship" data-full="a 2008 Thai Romantic-Drama Teen Film starring Mario Maurer and Apinya Sakuljaroensuk (Ploy) directed by Chatchai Naksuriya." />
+				-->
+				<!--END Slider images-->
+
 			</div>
 		</article>
+		<!--END Slider-->
 
+		<!--BEGIN About-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- without parallax background
+				- with image galleries, described in <Blueimp> section.
+
+		-->
+		<!--
+		<iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/KTiQ75HY0DA?rel=0&enablejsapi=1" frameborder="0"></iframe>
+		-->
 		<article class="about page-light-dose theme-white background foreground links" id="praticidade">
 			<header class="text-center">
 				<h2>
@@ -143,58 +224,74 @@
 			<div class="container">
 				<div class="row">
 
+					<!--BEGIN Blueimp-->
+					<!--DESCRIPTION
+
+						Here a gallery of five images is formed.
+						See .blueimp class reference for details.
+
+					-->
 					<div class="blueimp col-lg-3 col-md-3 col-sm-6 col-xs-12 masonry">
 
+						<!--BEGIN Blueimp image-->
 						<a href="imagens/empreendimento-01.jpg" title="">
 							<img src="imagens/empreendimento-thumb-01.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
+						<!--END Blueimp image-->
 
+						<!--BEGIN Blueimp image-->
 						<a href="imagens/empreendimento-02.jpg" title="">
 							<img src="imagens/empreendimento-thumb-02.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
+						<!--END Blueimp image-->
+
+						<!--BEGIN Blueimp image-->
 						<a href="imagens/empreendimento-03.jpg" title="">
 							<img src="imagens/empreendimento-thumb-03.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
-						
+						<!--END Blueimp image-->
 
-						
+						<!--BEGIN Blueimp image-->
 						<a href="imagens/empreendimento-04.jpg" title="">
 							<img src="imagens/empreendimento-thumb-04.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
-						
+						<!--END Blueimp image-->
 
-						
+						<!--BEGIN Blueimp image-->
 						<a href="imagens/empreendimento-05.jpg" title="">
 							<img src="imagens/empreendimento-thumb-05.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
-						
+						<!--END Blueimp image-->
 
-						
+						<!--BEGIN Blueimp image-->
 						<a href="imagens/empreendimento-06.jpg" title="">
 							<img src="imagens/empreendimento-thumb-06.jpg" alt="" />
 							<div class="overlay">
 							</div>
 						</a>
-						
+						<!--END Blueimp image-->
 
 					</div>
+					<!--END Blueimp-->
 
 					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 
+						<!--BEGIN About block caption-->
 						<h5>
 							PRATICIDADE
 						</h5>
 						<h6>É VIVER PERTO DE TUDO O QUE VOCÊ PRECISA</h6>
+						<!--END About block caption-->
 
 						<p>
 							Nada melhor do que acordar e ter uma mesa de café da manhã completa com pão quentinho, ovos mexidos, seu
@@ -211,7 +308,15 @@
 				</div>
 			</div>
 		</article>
+		<!--END About-->
 
+		<!--BEGIN Facts-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with animated counters
+
+		-->
 		<article class="facts page-light-dose theme-white background foreground links" id="facts">
 			<div class="container text-center">
 				<h5>
@@ -220,6 +325,7 @@
 
 				<div class="row">
 
+					<!--BEGIN Facts item-->
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<span class="counter restaurantes">
 							<span class="value">
@@ -230,7 +336,9 @@
 							</small>
 						</span>
 					</div>
+					<!--END Facts item-->
 
+					<!--BEGIN Facts item-->
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<span class="counter agencias">
 							<span class="value">
@@ -241,7 +349,9 @@
 							</small>
 						</span>
 					</div>
+					<!--END Facts item-->
 
+					<!--BEGIN Facts item-->
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<span class="counter mercados">
 							<span class="value">
@@ -252,18 +362,33 @@
 							</small>
 						</span>
 					</div>
+					<!--END Facts item-->
 
 				</div>
 			</div>
 		</article>
+		<!--END Facts-->
 
+		<!-- BEGIN Localização -->
 		<article class="localizacao page-light-dose theme-white" id="localizacao">
 		
 
 			<img src='imagens/mapa.jpg' alt='' style=' width: 100%' />
 
 		</article>
+		<!-- END Localização -->
 
+
+		<!--BEGIN Works-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- without bootstrap grid
+				- with image galleries, described in <Blueimp> section.
+				- with content carousel, described in <Caroufredsel> section.
+				- with zoom-in animation effect upon first element viewing.
+
+		-->
 		<article class="works page-light-dose theme-white background foreground" id="plantas">
 			<header class="text-center">
 				<h2>
@@ -300,10 +425,15 @@
 					
 				</div>
 			</div>
+			<!--BEGIN Works grid-->
 			<ul class="list-inline grid small text-left">
 
+				<!--BEGIN Works grid item-->
 				<li class="fachada">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/fachada-thumb.jpg" alt="Fachada" />
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/palm-springs-in-postcards-dolly-faibyshev-3-580x387.jpg" alt="Palm springs in postcards" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -316,9 +446,15 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
+
+                
+                <!--BEGIN Works grid item-->
 				<li class="3qtosa">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/3qtos-thumb-01.jpg" alt="3 Quartos A" />
-
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/a-barcelona-apartment-by-eva-cotman-gessato-gblog-1-580x386.jpg" alt="A Barcelona apartment by Eva Cotman" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -331,10 +467,14 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
 
+				<!--BEGIN Works grid item-->
 				<li class="3qtosb">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/3qtos-thumb-02.jpg" alt="3 Quartos B" />
-
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/bamboo-chair-flow-by-cheng-tsung-feng-kao-min-chen-1-580x386.jpg" alt="Bamboo chair Flow" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -347,10 +487,14 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
 
+				<!--BEGIN Works grid item-->
 				<li class="lazer">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/lazer-thumb.jpg" alt="Lazer" />
-
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/jeroen-van-leurs-woodstock-wardrobe-1-580x388.jpg" alt="Jeroen Van Leur’s woodstock wardrobe" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -363,10 +507,14 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
 
+				<!--BEGIN Works grid item-->
 				<li class="2qtosa">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/2qtos-thumb-01.jpg" alt="2 Quartos A " />
-					
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/lstn-reclaimed-wood-headphones-9-580x386.jpg" alt="LSTN, reclaimed wood headphones" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -379,8 +527,14 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
+
+				<!--BEGIN Works grid item-->
 				<li class="2qtosb">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/2qtos-thumb-02.jpg" alt="2 Quartos B" />
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/nomadic-ironing-board-4-580x386.jpg" alt="Nomadic ironing board" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -393,8 +547,14 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
+
+				<!--BEGIN Works grid item-->
 				<li class="garagem">
 					<img class="zoomIn img-responsive stretch-width" src="imagens/plantas/garagem-thumb.jpg" alt="Garagem" />
+					<!--
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/outlier-minimal-backpack-2-580x386.jpg" alt="Outlier minimal backpack" />
+					-->
 					<div class="overlay">
 						<div class="stretch-both">
 							<div>
@@ -407,9 +567,32 @@
 							</div>
 						</div>
 					</div>
+				<!--END Works grid item-->
+    
 
+				<!--BEGIN Works grid item-->
+				<!--
+				<li class="other">
+					<img class="zoomIn img-responsive stretch-width" src="img/light-dose/works/ucy-11f1-porteur-duomatic-by-ucy-gessato-gblog-3-580x388.jpg" alt="11F1 Porteur Duomatic by UCY" />
+					<div class="overlay">
+						<div class="stretch-both">
+							<div>
+								<h4>
+									11F1 Porteur Duomatic by UCY
+								</h4>
+								<p>
+									from Firenze Bicycle Film Festival
+								</p>
+							</div>
+						</div>
+					</div>
+				-->
+				<!--END Works grid item-->
 
 			</ul>
+			<!--END Works grid-->
+
+			<!--BEGIN Works section-->
 			<section class="page-light-dose collapse-height stretch-width">
 				<div class="container">
 					<div class="row">
@@ -446,9 +629,11 @@
 							<div class="caroufredsel enable-controls">
 								<div class="row">
 									
+									<!--BEGIN Works carousel item-->
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
 											
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/fachada-01.jpg" title="Fachada 01">
 													<img class="img-responsive" src="imagens/plantas/fachada-01.jpg" alt="" />
@@ -456,6 +641,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/fachada-02.jpg" title="Fachada 02">
 													<img class="img-responsive" src="imagens/plantas/fachada-02.jpg" alt="" />
@@ -463,6 +651,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/fachada-03.jpg" title="Fachada completa">
 													<img class="img-responsive" src="imagens/plantas/fachada-03.jpg" alt="" />
@@ -470,6 +661,7 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->								
                                             
                                            
 										</div>
@@ -478,6 +670,7 @@
 									</div>
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
+										<!--BEGIN Works carousel item desciption-->
 										<h4>
 											Fachada
 										</h4>
@@ -494,12 +687,17 @@
 												Imagens da fachada.
 											</p>
 										</div>
+										<!--END Works carousel item desciption-->
 
 									</div>
 								</div>
+								<!--END Works carousel item-->
+
+								<!--BEGIN Works carousel item-->
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/3qtos-01.jpg" title="3 QTS - Coluna 1 e 2">
 													<img class="img-responsive" src="imagens/plantas/3qtos-01.jpg" alt="" />
@@ -507,6 +705,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/3qtos-02.jpg" title="3 QTS - Coluna 1">
 													<img class="img-responsive" src="imagens/plantas/3qtos-02.jpg" alt="" />
@@ -514,6 +715,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/3qtos-03.jpg" title="3 QTS - Coluna 2">
 													<img class="img-responsive" src="imagens/plantas/3qtos-03.jpg" alt="" />
@@ -521,6 +725,7 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->											
 											
 										</div>
 										<span class="pagination text-center">
@@ -544,13 +749,16 @@
 
 											</p>
 										</div>
+										<!--END Works carousel item desciption-->
 									</div>
 								</div>
 
+								<!--BEGIN Works carousel item-->
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
 
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/3qtos-04.jpg" title="3 QTS - Coluna 5 e 6">
 													<img class="img-responsive" src="imagens/plantas/3qtos-04.jpg" alt="" />
@@ -558,6 +766,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/3qtos-05.jpg" title="3 QTS - Coluna 5">
 													<img class="img-responsive" src="imagens/plantas/3qtos-05.jpg" alt="" />
@@ -565,6 +776,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											 <!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/3qtos-06.jpg" title="3 QTS - Coluna 6">
 													<img class="img-responsive" src="imagens/plantas/3qtos-06.jpg" alt="" />
@@ -572,6 +786,7 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
 										</div>
 										<span class="pagination text-center">
 										</span>
@@ -595,9 +810,13 @@
 										</div>										
 									</div>
 								</div>
+								<!--END Works carousel item-->
+
+								<!--BEGIN Works carousel item-->
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/lazer-01.jpg" title="Planta">
 													<img class="img-responsive" src="imagens/plantas/lazer-01.jpg" alt="" />
@@ -605,6 +824,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/lazer-02.jpg" title="Piscina">
 													<img class="img-responsive" src="imagens/plantas/lazer-02.jpg" alt="" />
@@ -612,6 +834,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/lazer-03.jpg" title="Gourmet">
 													<img class="img-responsive" src="imagens/plantas/lazer-03.jpg" alt="" />
@@ -619,6 +844,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/lazer-04.jpg" title="Academia">
 													<img class="img-responsive" src="imagens/plantas/lazer-04.jpg" alt="" />
@@ -626,6 +854,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/lazer-05.jpg" title="Repouso">
 													<img class="img-responsive" src="imagens/plantas/lazer-05.jpg" alt="" />
@@ -633,6 +864,7 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->	
 										</div>
 										<span class="pagination text-center">
 										</span>
@@ -657,9 +889,13 @@
 										</div>										
 									</div>
 								</div>
+								<!--END Works carousel item-->
+
+								<!--BEGIN Works carousel item-->
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/2qtos-01.jpg" title="2 QTS - Coluna 3 e 4">
 													<img class="img-responsive" src="imagens/plantas/2qtos-01.jpg" alt="" />
@@ -667,6 +903,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/2qtos-02.jpg" title="2 QTS - Coluna 3">
 													<img class="img-responsive" src="imagens/plantas/2qtos-02.jpg" alt="" />
@@ -674,6 +913,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											 <!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/2qtos-03.jpg" title="2 QTS - Coluna 4">
 													<img class="img-responsive" src="imagens/plantas/2qtos-03.jpg" alt="" />
@@ -681,6 +923,7 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
 										</div>
 										<span class="pagination text-center">
 										</span>
@@ -704,9 +947,13 @@
 										</div>
 									</div>
 								</div>
+								<!--END Works carousel item-->
+
+								<!--BEGIN Works carousel item-->
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/2qtos-04.jpg" title="2 QTS - Coluna 7 e 8">
 													<img class="img-responsive" src="imagens/plantas/2qtos-04.jpg" alt="" />
@@ -714,6 +961,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/2qtos-05.jpg" title="2 QTS - Coluna 7">
 													<img class="img-responsive" src="imagens/plantas/2qtos-05.jpg" alt="" />
@@ -721,6 +971,9 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
+                                            
+											 <!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/2qtos-06.jpg" title="2 QTS - Coluna 8">
 													<img class="img-responsive" src="imagens/plantas/2qtos-06.jpg" alt="" />
@@ -728,6 +981,7 @@
 													</div>
 												</a>
 											</div>
+											<!--END Works carousel item inner-->
 										</div>
 										<span class="pagination text-center">
 										</span>
@@ -751,9 +1005,13 @@
 										</div>
 									</div>
 								</div>
+								<!--END Works carousel item-->
+
+								<!--BEGIN Works carousel item-->
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 										<div class="caroufredsel enable-swipe enable-pagination blueimp">
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/garagem-01.jpg" title="Garagem">
 													<img class="img-responsive" src="imagens/plantas/garagem-01.jpg" alt="" />
@@ -761,8 +1019,9 @@
 													</div>
 												</a>
 											</div>
-											
+											<!--END Works carousel item inner-->
                                             
+											<!--BEGIN Works carousel item inner-->
 											<div>
 												<a class="img-responsive" href="imagens/plantas/garagem-02.jpg" title="Garagem Elevada">
 													<img class="img-responsive" src="imagens/plantas/garagem-02.jpg" alt="Garagem Elevada" />
@@ -770,7 +1029,7 @@
 													</div>
 												</a>
 											</div>
-											
+											<!--END Works carousel item inner-->
 										</div>
 										<span class="pagination text-center">
 										</span>
@@ -794,6 +1053,7 @@
 										</div>
 									</div>
 								</div>
+								<!--END Works carousel item-->
 
 								
 							</div>
@@ -801,6 +1061,9 @@
 					</div>
 				</div>
 			</section>
+			<!--END Works section-->
+
+			<!-- BEGIN Plantas Outros -->
 			<div id="plantas-outros">
 				<div class="container">
 
@@ -822,9 +1085,19 @@
 					</div>
 				</div>
 			</div>
+			<!-- END Plantas Outros -->
 
 		</article>
+		<!--END Works-->
 
+		<!--BEGIN Contacts-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- with parallax background, see DEMO styles for details.
+				- with zoom-in animation effect upon first element viewing.
+
+		-->
 		<article class="contacts page-light-dose theme-color background foreground links aparallax" id="contacts">
 			<div class="underlay">
 				<header class="text-center light">
@@ -835,12 +1108,24 @@
 				<div class="container">
 					<div class="row">
 
+						<!--BEGIN Contatcs item-->
 						<div class="text-center col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<a href="skype:+7771001234">
 
+								<!--BEGIN Contatcs item icon-->
+								<!--DESCRIPTION
+
+									For icon details one can visit
+										http://fortawesome.github.io/Font-Awesome/cheatsheet/
+									There all icon symbol details are supplied.
+
+									For zoom-in animation see .zoomIn class reference.
+
+								-->
 								<h4 class="fa zoomIn">
 									&#xf10a;
 								</h4>
+								<!--END Contatcs item icon-->
 
 								<div class="overlay">
 								</div>
@@ -849,12 +1134,17 @@
 								</p>
 							</a>
 						</div>
+						<!--END Contatcs item-->
+
+						<!--BEGIN Contatcs item-->
 						<div class="text-center col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<a href="mailto:mail@example.com">
 
+								<!--BEGIN Contatcs item icon-->
 								<h4 class="fa zoomIn">
 									&#xf003;
 								</h4>
+								<!--END Contatcs item icon-->
 
 								<div class="overlay">
 								</div>
@@ -863,12 +1153,17 @@
 								</address>
 							</a>
 						</div>
+						<!--END Contatcs item-->
+
+						<!--BEGIN Contatcs item-->
 						<div class="text-center col-lg-4 col-md-4 col-sm-4 col-xs-12">
 							<a href="https://maps.google.com/maps?q=49+Archdale,+2B+Charleston&amp;hl=ru&amp;sll=37.0625,-95.677068&amp;sspn=60.028724,135.263672&amp;hnear=49+Archdale+St,+Charleston,+South+Carolina+29401&amp;t=m&amp;z=17">
 
+								<!--BEGIN Contatcs item icon-->
 								<h4 class="fa zoomIn">
 									&#xf041;
 								</h4>
+								<!--END Contatcs item icon-->
 
 								<div class="overlay">
 								</div>
@@ -879,9 +1174,11 @@
 								</address>
 							</a>
 						</div>
+						<!--END Contatcs item-->
 
 					</div>
 
+					<!--BEGIN Contacts form-->
 					<form name="feedbackForm" method="POST" action="/" class="small text-center validator">
 						<h4>
 							OU ENVIE SUA MENSAGEM
@@ -896,10 +1193,14 @@
 						</ul>
 						<input name="Submit" type="submit" class="btn btn-default" value="ENVIAR" />
 					</form>
+					<!--END Contacts form-->
 
 				</div>
 			</div>
 		</article>
+		<!--END Contacts-->
+
+		<!--BEGIN Footer-->
 		<footer class="footer theme-color background foreground text-center">
 			<div class="container">
 				<ul class="list-inline nav-footer">
@@ -931,6 +1232,7 @@
 				</div>
 			</div>
 		</footer>
+		<!--END Footer-->
 
 		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
 			<div class="slides">

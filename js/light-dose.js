@@ -848,12 +848,7 @@ $( window ).load( function() {
 	};
 } )( jQuery );
 /**/
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Hel Ohm Um Lo Cham                                                *
- * Created by wfoojjaec                                              *
- * For any copyright issues one should contact author directly       *
- *  via gmail or skype.                                              *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
 var delay = ( function() {
 	'use strict';
 	var timeout = { };
@@ -869,11 +864,7 @@ var delay = ( function() {
 		}
 	};
 } )();
-/**
-	Aslider jQuery plugin
-	by default_string@i.ua
-	Uses <img ... /> tags in a passed container
-*/
+
 ( function( $, f ) {
 	'use strict';
 	//  If there's no jQuery, Aslider can't work, so kill the operation.
@@ -1124,23 +1115,7 @@ var delay = ( function() {
 } )( window.jQuery, false );
 /*	*/
 
-/* ========================================================================
- * This is a MODIFIED version of scrollspy script with a custom hash fix
- * ========================================================================
- * Copyleft 2013
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
+
 
 ( function( $ ) {
 	'use strict';

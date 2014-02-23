@@ -1192,7 +1192,7 @@ form .radio.disabled > label {
 				background-color: rgba( 255, 255, 255, 0.3 );
 			}
 			.theme-color .btn:hover {
-				color: #054383 !important;
+				color: #000 !important;
 				background-color: #FFF !important;
 			}
 		/*/----------------------------------------------------------/*/
@@ -1434,25 +1434,21 @@ form .radio.disabled > label {
 	background-color: #EFEFEF;
 }
 .theme-white .blueimp a .overlay {
-	background-color: rgba( 5, 67, 131, 0.85 );
+	background-color: rgba( 82, 37, 13, 0.5 );
 	background-image: url( '../img/icons-about-eye-white.png' );
 	background-image: none, url( '../img/icons-about-eye-white.svg' );
 }
-.theme-white.topper,
-.theme-white.topper .menu.menu-dropdown {
+.theme-white.topper {
 	box-shadow: 0 0 6px #000;
 }
 .theme-white .logo div {
 	color: #999;
 }
 .theme-white .nav > li > a > .overlay {
-	background-color: rgba( 5, 67, 131, 0.3 );
+	background-color: rgba( 255, 255, 255, 0.8 );
 }
 .theme-white.topper .menu-toggle {
-	color: #000;
-}
-.theme-white .menu.menu-dropdown {
-	background-color: #FFF;
+	color: #FFF;
 }
 .theme-white .nav > li > a,
 .theme-white .nav > li > a:link,
@@ -1485,7 +1481,7 @@ form .radio.disabled > label {
 }
 .theme-white.works .grid li .overlay {
 	color: #FFF;
-	background-color: rgba( 5, 67, 131, 0.8 );
+	background-color: rgba( 82, 37, 13, 0.5 );
 }
 .theme-white.works .page-light-dose {
 	background-color: #F7F7F7;
@@ -1756,9 +1752,6 @@ form .radio.disabled > label {
 .theme-color {
 	/*	*/
 }
-.theme-color.background {
-	background-color: #054383;
-}
 .theme-color.foreground {
 	color: #FFF;
 }
@@ -1934,7 +1927,7 @@ form .radio.disabled > label {
 	border-bottom: 2px rgba( 255, 255, 255, 0.3 ) solid !important;
 }
 .theme-color.slider .inner-wrapper {
-	background-color: rgba( 0, 0, 0, 0.5 );
+	background-color: rgba( 0, 0, 0, 0.2 );
 }
 .theme-color.slider .slider-controls div.circle {
 	background-image: url( '../img/icons-slider-circle-white.png' );
@@ -2274,6 +2267,21 @@ form .radio.disabled > label {
 /*                               ABOUT                                */
 /*--------------------------------------------------------------------*/
 
+@media (max-width: 505px) {
+	.about h2 {
+		font-size: 2.5em;
+	}
+}
+@media (max-width: 410px) {
+	.about h2 {
+		font-size: 2em;
+	}
+}
+@media (max-width: 320px) {
+	.about h2 {
+		font-size: 1.7em;
+	}
+}
 .about h5 {
 	margin-bottom: 0;
 }
@@ -2283,6 +2291,11 @@ form .radio.disabled > label {
 }
 .about .col-md-3 {
 	width: 50%;
+}
+@media (max-width: 765px) {
+  .about .col-md-3 {
+    width: 100% !important;
+  }  
 }
 .about a {
 	display: block;
@@ -2296,6 +2309,7 @@ form .radio.disabled > label {
 	margin-bottom: 20px;
 	float: none;
 	clear: both;
+	font-size: 95%;
 }
 
 /*--------------------------------------------------------------------*/
@@ -3116,6 +3130,7 @@ form .radio.disabled > label {
 /*                            CAROUFREDSEL                            */
 /*--------------------------------------------------------------------*/
 .caroufredsel {
+	color: #000 !important;
 }
 .caroufredsel > * {
 	display: block;
@@ -3424,6 +3439,42 @@ ol.commentlist li ol.commentlist {
 /*--------------------------------------------------------------------*/
 /*                              OVERRIDE                              */
 /*--------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+	header div.image img {
+		width: 82px;
+	}
+	header a.logo {
+		margin-top: -10px;
+	}
+}
+@media (max-width: 920px) {
+	#plantas-outros h4 {
+		font-size: 1.5em;
+		min-height: 50px;
+	}
+	#plantas-outros img {
+		width: 75%;
+	}
+}
+@media (max-width: 760px) {
+	#plantas-outros h4 {
+		font-size: 1.4em;
+		min-height: 0 !important;
+		margin: 30px 0 12px;
+	}
+	#plantas-outros .row {
+		margin-top: 75px !important;
+	}
+	#plantas-outros .row div {
+		margin: 0 auto;
+	}
+	#plantas-outros img {
+		max-width: 250px;
+	}
+	.works #plantas-outros .col-md-3 {
+		width: 100%;
+	}
+}
 @media ( max-width: 1170px ) {
 	section,
 	.container {
@@ -3518,7 +3569,7 @@ ol.commentlist li ol.commentlist {
 			height: 36px;
 		}
 		.topper .logo {
-			margin-top: 4px;
+			margin-top: -5px;
 		}
 		.topper .logo svg {
 			max-width: 40px;
@@ -3529,7 +3580,7 @@ ol.commentlist li ol.commentlist {
 		}
 		.logo div object,
 		.logo div img {
-			width: 45px;
+			width: 60px !important;
 		}
 		.topper .menu-toggle {
 			margin: 8px 0 0;
