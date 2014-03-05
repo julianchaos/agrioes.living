@@ -480,7 +480,6 @@ var handler = {
 		}
 		//	Slider
 		$( '.slider > div#slider' ).Aslider();
-		$( '.slider > div#about' ).Aslider();
 		//--//
 		//	Accordion
 		$( '.accordion.open' ).each( function() {
@@ -495,13 +494,7 @@ var handler = {
 			$( this ).get( 0 ).onclick = function( event ) {
 				event = event || window.event;
 				var target = event.target || event.srcElement;
-				
-				var helper = target;
-				while(!helper.href){
-					helper = $(helper).parent().get(0);
-				}
-				//var link = $( target.src ? target.parentNode : target ).parent().get( 0 );
-				var link = helper;
+				var link = $( target.src ? target.parentNode : target ).parent().get( 0 );
 				var options = {
 					index : link,
 					event : event
@@ -666,12 +659,12 @@ var handler = {
 			} );
 		} );
 		//--//
-		//var caroufredselContainer = $( '.works .caroufredsel' ).first();
+		var caroufredselContainer = $( '.works .caroufredsel' ).first();
 		var gridItems = $( '.works .grid > li' );
-		//if( caroufredselContainer.children().length == gridItems.length ) {
-			//gridItems.each( function() {
-				//caroufredselContainer.children().eq( $( this ).index() ).attr( 'data-index', $( this ).index() );
-			//} );
+		if( caroufredselContainer.children().length == gridItems.length ) {
+			gridItems.each( function() {
+				caroufredselContainer.children().eq( $( this ).index() ).attr( 'data-index', $( this ).index() );
+			} );
 			var gridFilterItems = $( '.grid-filter a' );
 			if( gridFilterItems.length !== 0 )
 				gridFilterItems.click( function( event ) {
@@ -679,14 +672,14 @@ var handler = {
 					var itemsVisible = ! gridItems.parent().hasClass( 'collapse-height' );
 					$( this ).addClass( 'active' ).siblings().removeClass( 'active' );
 					var filter = $( this ).attr( 'data-filter' );
-					//caroufredselContainer.children().addClass( 'disabled' );
+					caroufredselContainer.children().addClass( 'disabled' );
 					function filterGrid() {
 						var gridItemsFiltered = gridItems.filter( filter );
 						function finalize() {
-							//gridItemsFiltered.each( function() {
-								//caroufredselContainer.children( '*[data-index=' + $( this ).index() + ']' ).removeClass( 'disabled' );
-							//} );
-							//caroufredselContainer.trigger( 'slideTo', caroufredselContainer.children( ':not(.disabled)' ).first() );
+							gridItemsFiltered.each( function() {
+								caroufredselContainer.children( '*[data-index=' + $( this ).index() + ']' ).removeClass( 'disabled' );
+							} );
+							caroufredselContainer.trigger( 'slideTo', caroufredselContainer.children( ':not(.disabled)' ).first() );
 						}
 						if( itemsVisible ) {
 							var counter = 0;
@@ -730,7 +723,7 @@ var handler = {
 						filterGrid();
 					}
 				} );
-		//}
+		}
 		function switchToItem( index ) {
 			var section = $( '.works section.page-light-dose' );
 			if( section.length > 0 ) {
@@ -790,7 +783,7 @@ $( window ).load( function() {
 //--//
 /*	*/
 /***********************************************************************************
- * jQuery Adaptive parralax plugin v.1.4                                           *
+ * jQuery Adaptive parralax plugin v.1.3d                                          *
  * Created by wfoojjaec                                                            *
  * For any copyright issues one should contact author directly via gmail or skype. *
  ***********************************************************************************/
@@ -800,87 +793,57 @@ $( window ).load( function() {
 		if( jQuery( this ).length > 0 )
 			jQuery( this ).each( function() {
 				var jQuerythis = jQuery( this );
-
 				var windowWidth = jQuery( window ).width();
 				var windowHeight = jQuery( window ).height();
+				var elementWidth = jQuerythis.outerWidth();
+				var elementHeight = jQuerythis.outerHeight();
 
+				$( window ).resize( function() {
+					windowWidth = jQuery( window ).width();
+					windowHeight = jQuery( window ).height();
+					elementWidth = jQuerythis.outerWidth();
+					elementHeight = jQuerythis.outerHeight();
+					update( Aparallax );
+				} );
+
+				var backgroundImage = $( '<div style="position : absolute; width : 0; height : 0; z-index : -1; overflow : hidden"><img src=' + jQuerythis.css( 'backgroundImage' ).replace( 'url(', '' ).replace( ')', '' ) + ' /></div>' );
+				$( 'body' ).append( backgroundImage );
+				var backgroundHeight = 0;
+				var backgroundWidth = 0;
+				backgroundImage.children().first().load( function() {
+					backgroundWidth = backgroundImage.children().first().width();
+					backgroundHeight = backgroundImage.children().first().height();
+					backgroundImage.remove();
+				} );
+				$( window ).scroll( function() {
+					update( Aparallax );
+				} );
+				$( window ).load( function() {
+					update( Aparallax );
+				} );
 				function update( Aparallax ) {
 					var windowScrollTop = $( window ).scrollTop();
 					var elementOffsetTop = jQuerythis.offset().top;
-					var elementWidth = jQuerythis.outerWidth();
-					var elementHeight = jQuerythis.outerHeight();
-					var ratio = elementWidth / backgroundImageWidth;
 					if( windowScrollTop < elementOffsetTop + elementHeight && windowScrollTop + windowHeight > elementOffsetTop && jQuerythis.hasClass( 'aparallax' ) ) {
 						var offset;
 						if( Aparallax === true || Aparallax === undefined ) {
-							if( windowScrollTop > elementOffsetTop + elementHeight || windowScrollTop + windowHeight < elementOffsetTop || backgroundImageHeight * ratio <= elementHeight )
+							var ratio = ( jQuerythis.css( 'background-attachment' ) == 'fixed' ) ? windowWidth / backgroundWidth : elementWidth / backgroundWidth;
+							if( windowScrollTop > elementOffsetTop + elementHeight || windowScrollTop + windowHeight < elementOffsetTop || backgroundHeight * ratio <= elementHeight )
 								offset = 0;
 							else {
 								var after = Math.max( windowScrollTop + windowHeight - elementOffsetTop - elementHeight, 0 ) / windowHeight;
 								var before = Math.min( ( windowScrollTop + windowHeight - elementOffsetTop ) / windowHeight, 1 );
-								offset = - Math.floor( ( after + before ) / 2 * ( backgroundImageHeight * ratio - elementHeight ) );
+								offset = - Math.floor( after + before / 2 * ( backgroundHeight * ratio - elementHeight ) );
 							}
 						}
 						else
 							offset = 0;
-						var width = backgroundImageWidth * ratio;
-						backgroundImage.css( {
-							'top' : offset + 'px',
-							'left' : ( - width / 2 ) + 'px',
-							'width' : width + 'px',
-							'height' : backgroundImageHeight * ratio + 'px'
+						jQuerythis.css( {
+							'backgroundPosition' : 'center ' + offset + 'px'
 						} );
 					}
 				}
-
-				var backgroundImage = jQuerythis.css( 'backgroundImage' ).replace( 'url(', '' ).replace( ')', '' );
-				if( backgroundImage !== 'none' ) {
-
-					$( window ).resize( function() {
-						windowWidth = jQuery( window ).width();
-						windowHeight = jQuery( window ).height();
-						update( Aparallax );
-					} );
-
-					backgroundImage = $( '<img src=' + backgroundImage + ' />' );
-					jQuerythis.css( 'backgroundImage', 'none' );
-					jQuerythis.prepend( backgroundImage );
-					var backgroundImageWidth = 0;
-					var backgroundImageHeight = 0;
-					backgroundImage.load( function() {
-						backgroundImageWidth = backgroundImage.width();
-						backgroundImageHeight = backgroundImage.height();
-						if( typeof window.stackBlurCanvasRGB === 'function' && ( jQuerythis.hasClass( 'blur' ) || jQuerythis.attr( 'blur' ) ) ) {
-							var canvas = document.createElement( 'canvas' );
-							canvas = typeof canvas.getContext === 'function';
-							if( canvas ) {
-								var blurRadius = ( jQuerythis.attr( 'blur' ) ) ? jQuerythis.attr( 'blur' ) : 10;
-								canvas = $( '<canvas width="' + backgroundImageWidth + '" height="' + backgroundImageHeight + '"></canvas>' );
-								jQuerythis.prepend( canvas );
-								var canvasContext = canvas.get( 0 ).getContext( '2d' );
-								canvasContext.clearRect( 0, 0, backgroundImageWidth, backgroundImageHeight );
-								canvasContext.drawImage( backgroundImage.get( 0 ), 0, 0, backgroundImageWidth, backgroundImageHeight );
-								window.stackBlurCanvasRGB( canvas.get( 0 ), 0, 0, backgroundImageWidth, backgroundImageHeight, blurRadius );
-								backgroundImage.remove();
-								backgroundImage = canvas;
-							}
-						}
-						backgroundImage.css( {
-							'position' : 'absolute',
-							'marginLeft' : '50%'
-						} );
-					} );
-
-					$( window ).scroll( function() {
-						update( Aparallax );
-					} );
-
-					$( window ).load( function() {
-						update( Aparallax );
-					} );
-
-					update();
-				}
+				update();
 			} );
 	};
 } )( jQuery );
@@ -889,8 +852,8 @@ $( window ).load( function() {
  * Hel Ohm Um Lo Cham                                                *
  * Created by wfoojjaec                                              *
  * For any copyright issues one should contact author directly       *
- *  via gmail or skype.                                              */
-
+ *  via gmail or skype.                                              *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 var delay = ( function() {
 	'use strict';
 	var timeout = { };
@@ -906,7 +869,11 @@ var delay = ( function() {
 		}
 	};
 } )();
-
+/**
+	Aslider jQuery plugin
+	by default_string@i.ua
+	Uses <img ... /> tags in a passed container
+*/
 ( function( $, f ) {
 	'use strict';
 	//  If there's no jQuery, Aslider can't work, so kill the operation.
@@ -999,7 +966,7 @@ var delay = ( function() {
 			//	Call autoresize
 			function asliderResize() {
 				_.element.css( {
-					'height' : Math.min( Math.max( 360, $( window ).height() ) ) + 'px',
+					'height' : Math.min( Math.max( 360, $( window ).height() ) ) + 'px'
 				} );
 				var elementRatio = _.element.outerWidth() / _.element.outerHeight();
 				_.items.each( function() {
@@ -1053,6 +1020,18 @@ var delay = ( function() {
 			}
 		};
 
+		function setText() {
+			if( $( '.data-short' ).text() != _.items.eq( _.current ).attr( 'data-short' ) )
+				$( '.data-short' ).fadeOut( _.options.speed / 2, function() {
+					$( '.data-short' ).text( _.items.eq( _.current ).attr( 'data-short' ) );
+					$( '.data-short' ).fadeIn( _.options.speed / 2 );
+				} );
+			if( $( '.data-full' ).text() != _.items.eq( _.current ).attr( 'data-full' ) )
+				$( '.data-full' ).fadeOut( _.options.speed / 2, function() {
+					$( '.data-full' ).text( _.items.eq( _.current ).attr( 'data-full' ) );
+					$( '.data-full' ).fadeIn( _.options.speed / 2 );
+				} );
+		}
 		//  Move Aslider to a slide index
 		this.move = function( index ) {
 			if( this.current != index && !this.moving ) {
@@ -1074,12 +1053,13 @@ var delay = ( function() {
 						//};
 						_.current = index;
 						_.last = index;
-						//setText();
+						setText();
 						_.moving = false;
 					} );
 				}
 				else {
 					_.current = index;
+					setText();
 					_.moving = false;
 				}
 				if( !this.element.is( ':animated' ) ) {
@@ -1157,7 +1137,23 @@ var delay = ( function() {
 } )( window.jQuery, false );
 /*	*/
 
-
+/* ========================================================================
+ * This is a MODIFIED version of scrollspy script with a custom hash fix
+ * ========================================================================
+ * Copyleft 2013
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ======================================================================== */
 
 ( function( $ ) {
 	'use strict';
@@ -1179,8 +1175,7 @@ var delay = ( function() {
 		this.activeTarget = null;
 
 		this.refresh();
-		//this.process();
-		this.activate('#slider');
+		this.process();
 	}
 
 	AScrollSpy.DEFAULTS = {
@@ -1215,8 +1210,8 @@ var delay = ( function() {
 
 	AScrollSpy.prototype.process = function () {
 		//var scrollTop = this.$scrollElement.scrollTop() + this.options.offset;
-    	var scrollTop = this.$scrollElement.scrollTop() + this.options.offset + $( '.topper' ).outerHeight();
-
+    var scrollTop = this.$scrollElement.scrollTop() + this.options.offset + $( '.topper' ).outerHeight();
+    //
 		var scrollHeight = this.$scrollElement[ 0 ].scrollHeight || this.$body[ 0 ].scrollHeight;
 		var maxScroll = scrollHeight - this.$scrollElement.height();
 		var offsets = this.offsets;
@@ -1229,9 +1224,8 @@ var delay = ( function() {
 		}
 
 		var jsHint;
-		for( i = offsets.length; i--; ) {
+		for( i = offsets.length; i--; )
 			jsHint = activeTarget != targets[ i ] && scrollTop >= offsets[ i ] && ( ! offsets[ i + 1 ] || scrollTop <= offsets[ i + 1 ] ) && this.activate( targets[ i ] );
-		}
 	};
 
 	AScrollSpy.prototype.activate = function( target ) {

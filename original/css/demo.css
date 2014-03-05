@@ -5,28 +5,17 @@
 		SERVICES
 	*/
 	.services {
-		background-image: url('../novas/bg-conceito.jpg');
+		background-image: url( '../img/light-dose/background-services.jpg' );
 	}
 	.services .underlay {
 		background-color: transparent;
 	}
 	.services .overlay {
-		/*background-image: url( '../img/light-dose/background-services-blurred.jpg' );*/
+		background-image: url( '../img/light-dose/background-services-blurred.jpg' );
 	}
+	/*	*/
 	/*
-		ABOUT
-	*/
-	.about {
-		background-image: url('../novas/bg-praticidade.jpg');
-	}
-	/*
-		ASSINATURA
-	*/
-	.assinatura {
-		background-image: url('../novas/bg-assinatura.jpg');
-	}
-	/*
-		STORIES
+		ACTION
 	*/
 	.stories {
 		background-image: url( '../img/light-dose/background-action.jpg' );
@@ -50,7 +39,7 @@
 		CONTACTS
 	*/
 	.contacts {
-		background-image: url( '../imagens/background-contacts.jpg' );
+		background-image: url( '../img/light-dose/background-contacts.jpg' );
 	}
 	/*	*/
 	a.demo.five {

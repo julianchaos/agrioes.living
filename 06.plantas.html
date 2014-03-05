@@ -13,7 +13,7 @@
 		<link rel="stylesheet" media="screen" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" />
 		<link rel="stylesheet" media="screen" href="css/social-icons.css" />
 		<link rel="stylesheet" media="screen" href="css/light-dose.css" />
-		<!-- <link rel="stylesheet" media="screen" href="css/demo.css" /> -->
+		<link rel="stylesheet" media="screen" href="css/demo.css" />
 		<!--[if IE 8]>
 			<link rel="stylesheet" type="text/css" href="css/light-dose-ie8.css" />
 		<![endif]-->
@@ -27,7 +27,116 @@
 	</head>
 	<body>
 		
-		
+		<!--BEGIN Works-->
+		<!--DESCRIPTION
+
+			This article is designed:
+				- without bootstrap grid
+				- with image galleries, described in <Blueimp> section.
+				- with content carousel, described in <Caroufredsel> section.
+				- with zoom-in animation effect upon first element viewing.
+
+		-->
+
+		<article class="works page-light-dose theme-white background foreground" id="plantas">
+			<header class="text-center">
+				<h2>
+					Projeto
+				</h2>
+			</header>
+
+			<div class="container">
+				<div class="row tags text-center grid-filter">
+					<a class="active" href="#" data-filter="*">
+						TODAS
+					</a>
+                    <a href="#" data-filter=".fachada">
+						FACHADA
+					</a>
+					<a href="#" data-filter=".lazer">
+						LAZER
+					</a>
+					<a href="#" data-filter=".3qtosa">
+						3 QTOS-A
+					</a>
+					<a href="#" data-filter=".3qtosb">
+						3 QTOS-B
+					</a>
+					<a href="#" data-filter=".2qtosa">
+						2 QTOS-A
+					</a>
+					<a href="#" data-filter=".2qtosb">
+						2 QTOS-B
+					</a>
+					<a href="#" data-filter=".garagem">
+						GARAGEM
+					</a>
+					
+				</div>
+			</div>
+			<ul class="list-inline grid small text-left blueimp">
+				<!--BEGIN Blueimp image-->
+				<li class="fachada">
+					<a href="imagens/plantas/fachada-01.jpg" title="">
+						<img src="imagens/plantas/fachada-thumb.jpg" alt="" />
+						<div class="overlay">
+							<div class="stretch-both">
+								<div>
+									<h4>
+										Fachada 
+									</h4>
+									<p>
+										Agriões Living
+									</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<!--BEGIN Blueimp image-->
+				<li class="3qtosa">
+					<a href="imagens/plantas/3qtos-01.jpg" title="">
+						<img src="imagens/plantas/3qtos-thumb-01.jpg" alt="3 Quartos A" />
+
+						<div class="overlay">
+							<div class="stretch-both">
+								<div>
+									<h4>
+										3 Quartos - A 
+									</h4>
+									<p>
+										Colunas 1 e 2
+									</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<!--BEGIN Blueimp image-->
+				<li class="lazer">
+					<a href="imagens/plantas/lazer-01.jpg">
+						<img  src="imagens/plantas/lazer-thumb.jpg" alt="Lazer" />
+
+						<div class="overlay">
+							<div class="stretch-both">
+								<div>
+									<h4>
+										Lazer
+									</h4>
+									<p>
+										Planta e 3D
+									</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>	
+
+		</article>
+		<!--END Works-->
 
 		<!-- BLUEIMP GALLERY -->
 		<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
@@ -50,6 +159,7 @@
 			</ol>
 		</div>
 		<!-- END OF BLUEIMP GALLERY -->
+		
 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
@@ -61,7 +171,7 @@
 		<script type="text/javascript" src="js/helper-plugins/jquery.mousewheel.min.js"></script>
 		<script type="text/javascript" src="js/helper-plugins/jquery.touchSwipe.min.js"></script>
 		<script type="text/javascript" src="js/helper-plugins/jquery.transit.min.js"></script>
-		<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+		<!-- <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script> -->
 
 		<script type="text/javascript" src="js/jquery.customSelect.min.js"></script>
 
