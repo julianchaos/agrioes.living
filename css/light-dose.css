@@ -106,6 +106,9 @@ p {
 	margin: 0 0 35px 0;
 	font-size: 112.5%; /* 18px */
 }
+.empreendimento p {
+	margin-bottom: 20px;
+}
 small {
 	font-size: 87.25%; /* 13px */
 }
@@ -383,14 +386,14 @@ article header {
 .nav > li > a:visited {
 	background: none;
 }
-.nav > .active > a > .overlay,
+/*.nav > .active > a > .overlay,
 .nav > .active > a:link > .overlay,
 .nav > .active > a:hover > .overlay,
 .nav > .active > a:focus > .overlay,
 .nav > .active > a:active > .overlay,
 .nav > .active > a:visited > .overlay {
 	opacity: 1;
-}
+} */
 .menu.menu-dropdown .nav > li > a > .overlay,
 .menu.menu-dropdown .nav > li > a:link > .overlay,
 .menu.menu-dropdown .nav > li > a:hover > .overlay,
@@ -985,6 +988,10 @@ form .radio.disabled > label {
 }
 .copyright {
 	font-size: 81.25%; /* 13px */
+	line-height: 3.5em;
+}
+.copyright a + a {
+	margin-left: 15px;
 }
 .copyright .sect {
 	margin-top: 20px;
@@ -1467,9 +1474,9 @@ form .radio.disabled > label {
 .theme-white .logo div {
 	color: #999;
 }
-.theme-white .nav > li > a > .overlay {
+/*.theme-white .nav > li > a > .overlay {
 	background-color: rgba( 255, 255, 255, 0.8 );
-}
+}*/
 .theme-white.topper .menu-toggle {
 	color: #FFF;
 }
@@ -2514,6 +2521,7 @@ form .radio.disabled > label {
 .assinatura h4 {
 	min-height: 64px;
 	text-align: center;
+	margin-top: 50px;
 }
 
 

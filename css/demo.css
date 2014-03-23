@@ -4,20 +4,17 @@
 	/*
 		SERVICES
 	*/
-	.services {
+	.empreendimento {
 		background-image: url('../novas/bg-conceito.jpg');
 	}
 	.services .underlay {
 		background-color: transparent;
 	}
-	.services .overlay {
-		/*background-image: url( '../img/light-dose/background-services-blurred.jpg' );*/
-	}
 	/*
 		ABOUT
 	*/
 	.about {
-		background-image: url('../novas/bg-praticidade.jpg');
+		/*background-image: url('../novas/bg-praticidade.jpg');*/
 	}
 	/*
 		ASSINATURA

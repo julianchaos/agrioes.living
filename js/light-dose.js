@@ -199,6 +199,22 @@ var handler = {
 			} );
 			$( validator );
 		} );
+		$('form[name=feedbackForm]').submit(function(e){
+			e.preventDefault();
+			$.ajax({
+				method: 'POST',
+            	url: 'contato.php',
+            	data: {
+            		nome: $('input[name=feedbackFormName]').val(),
+            		email: $('input[name=feedbackFormEmail]').val(),
+            		mensagem: $('input[name=feedbackFormComment]').val()
+				},
+            	success: function (data) {
+					alert('Mensagem enviada');                	
+            	},
+            	cache: false
+        	});			
+		});
 		//--//
 		//	Enable parallax effect
 		if( $( window ).width() > 1024 ) {
@@ -433,6 +449,8 @@ var handler = {
 			//--//
 			$( window ).ascrollspy( 'refresh' );
 		}
+
+		
 		var rowWidth;
 		$( window ).resize( function() {
 			var lastWidth = 0;
@@ -480,7 +498,6 @@ var handler = {
 		}
 		//	Slider
 		$( '.slider > div#slider' ).Aslider();
-		$( '.slider > div#about' ).Aslider();
 		//--//
 		//	Accordion
 		$( '.accordion.open' ).each( function() {
@@ -667,6 +684,12 @@ var handler = {
 		} );
 		//--//
 		//var caroufredselContainer = $( '.works .caroufredsel' ).first();
+		var bxSliderSettings = {
+			minSlides: 3,
+  			maxSlides: 4,
+  			slideWidth: ($(window).width()/4)
+  		};
+		var bxSliderObj = $('.bxslider').bxSlider(bxSliderSettings);
 		var gridItems = $( '.works .grid > li' );
 		//if( caroufredselContainer.children().length == gridItems.length ) {
 			//gridItems.each( function() {
@@ -729,8 +752,11 @@ var handler = {
 						gridItems.hide();
 						filterGrid();
 					}
+					bxSliderSettings.slideSelector = filter;
+					bxSliderObj.reloadSlider(bxSliderSettings);
 				} );
 		//}
+		$( '.grid-filter a.active' ).click();
 		function switchToItem( index ) {
 			var section = $( '.works section.page-light-dose' );
 			if( section.length > 0 ) {
@@ -999,7 +1025,8 @@ var delay = ( function() {
 			//	Call autoresize
 			function asliderResize() {
 				_.element.css( {
-					'height' : Math.min( Math.max( 360, $( window ).height() ) ) + 'px',
+					'height' : Math.min( Math.max( 360, $( window ).height() ) ) + 'px'
+					//'height': ($( window ).width() * 0.412109375 ) + 'px'
 				} );
 				var elementRatio = _.element.outerWidth() / _.element.outerHeight();
 				_.items.each( function() {
@@ -1052,6 +1079,18 @@ var delay = ( function() {
 				this.start();
 			}
 		};
+		function setText() {
+			if( $( '.data-short' ).text() != _.items.eq( _.current ).attr( 'data-short' ) )
+				$( '.data-short' ).fadeOut( _.options.speed / 2, function() {
+					$( '.data-short' ).text( _.items.eq( _.current ).attr( 'data-short' ) );
+					$( '.data-short' ).fadeIn( _.options.speed / 2 );
+				} );
+			if( $( '.data-full' ).text() != _.items.eq( _.current ).attr( 'data-full' ) )
+				$( '.data-full' ).fadeOut( _.options.speed / 2, function() {
+					$( '.data-full' ).text( _.items.eq( _.current ).attr( 'data-full' ) );
+					$( '.data-full' ).fadeIn( _.options.speed / 2 );
+				} );
+		}
 
 		//  Move Aslider to a slide index
 		this.move = function( index ) {
@@ -1074,7 +1113,7 @@ var delay = ( function() {
 						//};
 						_.current = index;
 						_.last = index;
-						//setText();
+						setText();
 						_.moving = false;
 					} );
 				}
