@@ -145,6 +145,7 @@ article {
 	width: 100%;
 	overflow: hidden;
 	-moz-box-sizing: border-box;
+	top: 100px;
 }
 article + article {
 	margin-top: 50px;
@@ -2264,8 +2265,32 @@ form .radio.disabled > label {
 	font-weight: 700; /* Bold */
 }
 .slider .inner-wrapper h4 {
-	margin: 0 auto 50px;
+	margin: 0 auto 20px;
 }
+
+@media ( max-width: 767px ) {
+	.slider .inner-wrapper h1 {
+		font-size: 300%;
+		margin: 0 0 5px;
+	}
+	.slider .btn {
+		font-size: 90%;
+		padding: 8px 50px;
+	}
+	.slider-controls {
+		display: none;
+	}
+
+}
+@media ( min-width: 768px ) {
+	.slider .inner-wrapper h4 {
+		margin: 0 auto 50px;
+	}
+	.slider-controls {
+		bottom: 35px;
+	}	
+}
+
 .slider .slide {
 	position: absolute;
 	right: 0;
@@ -3512,6 +3537,9 @@ ol.commentlist li ol.commentlist {
 	}
 }
 @media ( max-width: 1024px ) {
+	article {
+		top: 47px;
+	}
 	.topper,
 	.lower:before {
 		height: 47px;
@@ -3572,6 +3600,9 @@ ol.commentlist li ol.commentlist {
 	@media ( max-width: 767px ) {
 		.xs-hidden {
 			display: none;
+		}
+		article {
+			top: 36px;
 		}
 		article header {
 			padding: 25px 0 35px;

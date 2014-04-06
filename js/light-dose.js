@@ -1029,20 +1029,22 @@ var delay = ( function() {
 			} );
 			//	Call autoresize
 			function asliderResize() {
-				/*_.element.css( {
-					'height' : Math.min( Math.max( 360, $( window ).height() ) ) + 'px'
-				} );*/
+				_.element.css( {
+					'height': ($( window ).width() * 0.412109375 ) + 'px'
+
+					//'height' : Math.min( Math.max( 360, $( window ).height() ) ) + 'px'
+				} );
 				var elementRatio = _.element.outerWidth() / _.element.outerHeight();
 				_.items.each( function() {
 					var itemRatio = $( this ).outerWidth() / $( this ).outerHeight();
 					if( itemRatio > elementRatio ) {
 						$( this ).css( {
-							'width' : 'auto',
-							'height' : '100%'
+							'width' : '100%',
+							'height' : 'auto'
 						} );
 						$( this ).css( {
-							'right' : Math.round( ( _.element.outerWidth() - $( this ).outerWidth() ) / 2 ) + 'px',
-							'bottom' : '0'
+							'right' : '0',
+							'bottom' : Math.round( ( _.element.outerHeight() - $( this ).outerHeight() ) / 2 ) + 'px'
 						} );
 					}
 					else
