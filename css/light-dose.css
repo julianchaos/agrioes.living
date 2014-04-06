@@ -2318,6 +2318,30 @@ form .radio.disabled > label {
 .slider .slider-controls div.circle.active {
 	background-position: left center;
 }
+
+/*--------------------------------------------------------------------*/
+/*                           EMPREENDIMENTO                           */
+/*--------------------------------------------------------------------*/
+.empreendimento h4 {
+	font-size: 180%;
+	margin-top: 20px;
+	text-align: center;
+}
+@media (min-width: 768px) {
+	.empreendimento h4 {
+		margin-top: 30px;
+	}
+}
+@media (min-width: 1024px) {
+	.empreendimento h4 {
+		margin-bottom: 20px;
+	}
+	.empreendimento p {
+		font-size: 90%;
+		margin-bottom: 15px;
+	}
+}
+
 /*--------------------------------------------------------------------*/
 /*                               ABOUT                                */
 /*--------------------------------------------------------------------*/

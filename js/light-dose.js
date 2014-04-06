@@ -218,7 +218,7 @@ var handler = {
 		});
 		//--//
 		//	Enable parallax effect
-		if( $( window ).width() > 1024 ) {
+		if( $( window ).width() >= 1024 ) {
 			$( '.aparallax' ).Aparallax();
 		}
 		//--//
