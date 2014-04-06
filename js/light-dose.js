@@ -688,7 +688,9 @@ var handler = {
 		var bxSliderSettings = {
 			minSlides: 3,
   			maxSlides: 4,
-  			slideWidth: ($(window).width()/4)
+  			slideWidth: ($(window).width()/4),
+  			infiniteLoop: false,
+  			hideControlOnEnd: true
   		};
 		var gridItems = $( '.works .grid > li' );
 		//if( caroufredselContainer.children().length == gridItems.length ) {
