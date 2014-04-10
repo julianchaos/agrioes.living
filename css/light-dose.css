@@ -2343,6 +2343,48 @@ form .radio.disabled > label {
 }
 
 /*--------------------------------------------------------------------*/
+/*                           LOCALIZAÇÃO                              */
+/*--------------------------------------------------------------------*/
+.localizacao {
+	background: transparent url(../imagens/mapa.jpg) no-repeat center center ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.localizacao .mapa-img {
+	width: 100%;
+	display: none;
+}
+.localizacao > a > div {
+	background-color: #ffa700;
+	color: #FFF;
+	font-weight: bold;
+	text-align: center;
+	margin: 50px 20px;
+	text-shadow: 0 0 6px #333;
+	padding: 12px 0;
+}
+@media (min-width: 350px) { 
+	.localizacao > a > div {
+		margin: 75px 35px;
+	}
+}
+@media (min-width: 768px) {
+	.localizacao > a > div  {
+		margin: 150px 75px;
+	}
+}
+@media (min-width: 992px) {
+	.localizacao .mapa-img {
+		display: inline;
+	}
+	.localizacao > a > div {
+		display: none;
+	}
+}
+
+/*--------------------------------------------------------------------*/
 /*                            ASSINATURA                              */
 /*--------------------------------------------------------------------*/
 .assinatura .img-responsive {
