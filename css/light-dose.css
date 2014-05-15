@@ -261,6 +261,7 @@ article header {
 	float: left;
 }
 .topper .menu.menu-dropdown {
+	background-color: rgba(30, 30, 30, 0.8);
 	position: absolute;
 	display: none;
 	right: 0;
@@ -2322,6 +2323,7 @@ form .radio.disabled > label {
 /*--------------------------------------------------------------------*/
 /*                           EMPREENDIMENTO                           */
 /*--------------------------------------------------------------------*/
+
 .empreendimento h4 {
 	font-size: 180%;
 	margin-top: 20px;
@@ -2333,6 +2335,9 @@ form .radio.disabled > label {
 	}
 }
 @media (min-width: 1024px) {
+	.empreendimento > .img-responsive {
+		display: none;
+	}
 	.empreendimento h4 {
 		margin-bottom: 20px;
 	}
@@ -2341,6 +2346,7 @@ form .radio.disabled > label {
 		margin-bottom: 15px;
 	}
 }
+
 
 /*--------------------------------------------------------------------*/
 /*                           LOCALIZAÇÃO                              */

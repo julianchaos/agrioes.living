@@ -1,12 +1,22 @@
 /*--------------------------------------------------------------------*/
 /*                                DEMO                                */
 /*--------------------------------------------------------------------*/
+	
+	/*
+		EMPREENDIMENTO
+	*/
+
+	@media (min-width: 1024px) {
+		.empreendimento {
+			background-image: url('../novas/bg-conceito.jpg');
+		}	
+	}
+	.empreendimento .underlay {
+		background-color: transparent;
+	}
 	/*
 		SERVICES
 	*/
-	.empreendimento {
-		background-image: url('../novas/bg-conceito.jpg');
-	}
 	.services .underlay {
 		background-color: transparent;
 	}
